@@ -1,0 +1,45 @@
+<!-- 
+  the "configuration" element also accepts a boolean "scan" attribute.
+  enabling scans allows SLF4J to rescan a given config file and apply any
+  changes!
+ -->
+<configuration debug="false">
+
+  <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder>
+      <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %method: %msg%n</pattern>
+    </encoder>
+  </appender>
+
+  <appender name="JYTHON" class="ch.qos.logback.core.FileAppender">
+    <file>${mcv.userpath}/jython.log</file>
+    <encoder>
+      <pattern># %d{HH:mm:ss.SSS} [%thread] %level:%n%msg%n</pattern>
+    </encoder>
+   </appender>
+
+  <!-- you can override the root level for specific packages -->
+  <!-- <logger name="edu.wisc.ssec.mcidasv" level="TRACE"/> -->
+
+  <!-- use the logging level specified by the "loglevel" Java system property.
+       if the "loglevel" property was not set, logging will only listen for 
+       things at "INFO" level within mcv (by default)
+       
+       valid levels are: TRACE, DEBUG, INFO, WARN, ERROR, OFF
+       be sure to skim over http://logback.qos.ch/manual/architecture.html#basic_selection -->
+  <root level="${loglevel:-INFO}">
+    <appender-ref ref="STDOUT" />
+  </root>
+
+  <!-- Disable some initial status messages from the stdout/stderr redirect library -->
+  <logger name="uk.org.lidalia.sysoutslf4j" level="OFF" />
+  
+  <!-- Let's use this section of the file to group loggers that spew *way* too much output. -->
+  <logger name="httpclient.wire.content" level="OFF" />
+  <logger name="org.apache.commons.httpclient" level="OFF" />
+  <logger name="org.bushe.swing.event" level="OFF" />
+  <logger name="ucar.grib" level="OFF" />
+  <logger name="org.python" level="OFF" />
+  <logger name="httpclient" level="OFF" />
+  <!-- End of verbose logger section -->
+</configuration>

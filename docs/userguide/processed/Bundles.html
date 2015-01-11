@@ -1,0 +1,161 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- InstanceBegin template="/Templates/mcv_guide.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Bundles</title>
+<!-- InstanceEndEditable --><!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+<link rel="stylesheet" href="/mcidas/doc/mcv_guide/mcidasv.css" charset="ISO-8859-1" type="text/css">
+<!-- InstanceBeginEditable name="CurrentFile" -->
+<script language="javascript" type="text/javascript">
+function setParentPage() { if (parent.setPage) parent.setPage('Bundles.html',true); }
+</script>
+<!-- InstanceEndEditable -->
+<style type="text/css">
+<!--
+.style1 {font-size: large;}
+.style2 {font-size: small;}
+-->
+</style>
+</head>
+<body onLoad="setParentPage();">
+<div class="TopTitleNav">
+  <p class="style2" style="text-align:left; "> [<!-- InstanceBeginEditable name="GoToPrevious" --><a href="page_miscellaneous.html">Go
+        to Previous</a><!-- InstanceEndEditable -->] <span style="padding-left: 15px; "> [<!-- InstanceBeginEditable name="GoToNext" --><a href="misc/TimeMatching.html">Go
+        to Next</a><!-- InstanceEndEditable -->] </span> </p>
+  <hr align="center">
+</div>
+<!-- InstanceBeginEditable name="MainContent" -->
+<div class="pagetitle">Bundles</div>
+<p>Bundles let you save a quick "snapshot" of McIDAS-V, including data sources,
+  maps, and data displays. Bundles are small information files that specify the
+  state of McIDAS-V. They are a kind of configuration file. They include information
+  about what data sources are in use, and which parameters from the data sources
+  are displayed, and how they are displayed.</p>
+<p>The purpose of bundles is for you to save a particular McIDAS-V setup and
+  display. A bundle can be used for your own reference at a later time, or others
+  using McIDAS-V can use bundles you made to see data the same way you did.</p>
+<div class="pagesubtitle">Saving a Bundle</div>
+<p>To make a new bundle file, select the <strong>File-&gt;Save Bundle </strong> menu item in the Main Display window.
+  A pop-up window will let you set a new file location and name:</p>
+<a name="image1" id="image1"></a>
+<div class="images"><img src="images/FileDialog.gif" alt="Image 1: Bundle File Dialog"> <br>
+  <span class="caption">Image 1: Save Bundle Dialog</span></div>
+<p>The customary McIDAS-V bundle filename extension is <strong>.mcv</strong>;
+  if you do not enter a file extension, .mcv will be appended. When saving a
+  .mcv file, no data is saved with the bundle, only references to the remote
+  or local Data Sources are saved. </p>
+<p>McIDAS-V does support a zipped data bundle format:<strong> .mcvz</strong>. This is a zip file
+  that contains a regular bundle (.mcv) and a set of data files. When the user
+  does a "Save Bundle&quot; or &quot;Save Favorite " and specifies a .mcvz file
+  extension, McIDAS-V prompts the user to select the data sources that should
+  be written into the zip file. When opening a .mcvz file, McIDAS-V needs to
+  unzip the data files, so it prompts the user as to where to place the files
+  - a temporary directory or a user selected directory (this is a preference
+  as well).</p>
+<blockquote>Note: In order for bundle files to work, the data must be available in exactly
+    the same way you made connection to it when you made the bundle file. Others
+    who use your bundles must have access to the same file system or to the same
+    remote or local data servers you use, so that file paths or URLs to the data
+    are exactly the same.</blockquote>
+<p>The file dialog has a set of buttons to define how parts of your bundle is
+  saved.</p>
+<ul>
+  <li>The <strong>Jython</strong> menu allows you to save the Jython code you
+    may have in your library in different ways. For example, you may have written
+    some custom Jython code that implements a Formula. You have a display that
+    uses the results of that computation. To include your local Jython code just
+    select <strong>All Jython</strong> or <strong>Selected Jython</strong>. When
+    loading in a bundle that has had Jython code saved with it, the user will
+    be prompted for what to do with the Jython.</li>
+  <li><a name="relative" id="relative"></a> One can save a bundle with data paths
+    that are relative to where the bundle is loaded from by checking the <strong>Save
+    with relative paths</strong> checkbox. McIDAS-V will change the file based
+    data sources to point to the directory where the bundle is loaded from. For
+    example, you can use this to save a bundle that references model files on
+    disk. Copy the bundle and the model files over to a thumb drive or CD. Then
+    when you load the bundle the files are relative to the bundle path.
+    <!--<div class="pagesubtitle">JNLP Bundles</div>
+You can also save a bundle inside a &quot;jnlp file&quot; that can be used to
+start McIDAS-V with the bundle. Use a filename extension of &quot;.jnlp&quot; in
+place of .xidv. This file, when used as a link on a regular web page, allows
+McIDAS-V users to start McIDAS-V with Web Start on their system with your bundle.
+Click on the link to your jnlp file. McIDAS-V will start with the bundle you
+saved in the .jnlp file.-->
+    </li>
+</ul>
+
+<div class="pagesubtitle"><a name="favorites" id="favorites"></a>Saving a Bundle as a Favorite </div>
+<p>Favorite bundles are just normal bundles that are categorized and saved off
+  in a particular location on disk and serve as a convenience to the user. This
+  allows the user to organize their favorites by category and readily load them
+  in. Favorite bundles are easily available through the Bundles menu and can
+  also be displayed on the toolbar of the Main Display window.</p>
+<p>A favorite bundle can be created through the <strong>File-&gt;Save</strong><strong>
+    Favorite...</strong> menu item in the Main Display window:</p>
+<a name="image2" id="image2"></a>
+<div class="images"><img src="images/SaveAsFavorite.gif" alt="Image 2: Save As Favorite Dialog"> <br>
+  <span class="caption">Image 2: Save As Favorite Dialog</span></div>
+<p>Define your favorite bundle by specifying a category
+  in the <strong>Category</strong> field and a name in the <strong>Name</strong> field.
+  Categories can be hierarchical; by using a "&gt;" as a separator (e.g. <em>Toolbar&gt;sounding</em>)
+  the categories will appear as a tree structure in the Local Favorites Bundles
+  Manager. The "Toolbar" category
+  is a special category in the Favorite Bundles Manager. The bundles in the Toolbar
+  category will also appear as links in the toolbar of your Main Display window.</p>
+  <a name="localfav" id="localfav"></a>
+<p>The Local Favorite Bundles Manager, accessed
+  through the <strong>Bundles-&gt;Manage... </strong>menu item in the Main Display window, allows
+  you to reorganize the categories and favorites by drag-and-drop, or right
+  click on a favorite or a category to delete it, export it, etc.:</p>
+<a name="image3" id="image3"></a>
+<div class="images"><img src="images/FavoritesManager.gif" width="307" height="443" alt="Image 3: Local Favorite Bundles Manager"><br>
+  <span class="caption">Image 3: Local Favorite Bundles Manager</span></div>
+<p>Once a bundle has been saved as a favorite, it can be set as your default bundle that will load automatically when you start McIDAS-V. You can set a default bundle in the <strong><a href="tools/preferences/AdvancedPreferences.html#defaultbundle">Advanced</a></strong> tab of the User Preferences window. Note that after saving a favorite bundle, you must restart McIDAS-V before the bundle will be visible in the User Preferences window.</p>
+<p>The <strong>Show McIDAS-V system bundles</strong> checkbox at the bottom of the window sets the visibility of the <strong>Current WX</strong> bundles on the <a href="ui/MainToolBar.html">Main Toolbar</a>. This option is turned on by default. The visibility of the system bundles can also be set in the <a href="tools/preferences/GeneralPreferences.html#systemBundles"><strong>General</strong></a> tab of the User Preferences window.</p>
+<div class="pagesubtitle">Opening a Bundle</div>
+<a name="open" id="open"></a>
+<p>Use the <strong>File-&gt;Open File</strong> menu item in the Main Display window to open a bundle. When loading
+in a new bundle you will be prompted whether the current displays and data should
+be removed. You can also start up McIDAS-V with a bundle file or URL in the command
+line.</p>
+<a name="zidv" id="zidv"></a>
+<div class="pagesubtitle">Copying Data Locally </div>
+<p>For most remote data types, data can be copied from the server to the local
+  disk using the "Make Remote Data Local" facility. The following ADDE types
+  are supported: satellite, radar, point, sounding and forecast fronts. There
+is also preliminary support for grids on remote servers<sup>*</sup> (see below).</p>
+<p>This is used in two ways. First, the user can right-click on a data source
+  in the <strong>Field Selector</strong> and select "Make Data Local" for remote data sources.
+  McIDAS-V prompts for a file directory and a file prefix (the default is to
+  use the name of the data source) and the remote data is copied over. For multiple
+  files the format used is: &lt;directory&gt;&lt;prefix&gt;&lt;file count&gt;.&lt;suffix&gt;.
+  The data source object within McIDAS-V is then changed to point to the new
+  file paths.</p>
+<p>The second way this is used is when a .mcvz file is saved. The user is prompted
+  for both the local data sources to be saved off as well as for the remote data
+  sources. For the remote ones, McIDAS-V automatically copies the files over
+  and zips them.</p>
+<p><strong><sup>*</sup>Grids:</strong> There is preliminary support for grids.
+  This support relies on some extra service information in the catalogs which,
+  right at this moment, is not included in the regular IDV gridded data catalog
+  but is included for model data under the "File_Access" dataset in the main
+  thredds catalog: http://www.unidata.ucar.edu/georesources/threddsRtModels.xml When
+  saving gridded data the user is prompted for the fields to save and the geo-spatial
+  subset is used to subset the grids. As of right now, there is not yet support
+  for sub-setting on times and grid stride/decimation.</p>
+<div class="pagesubtitle">IDV Bundles</div>
+<p>McIDAS-V has the ability to load  IDV bundles (.xidv and .zidv), but
+  all of the features between the two software packages may not be compatible,
+  and therefore the bundles may not load properly in the other software package.</p>
+<!-- InstanceEndEditable -->
+<div class="BottomTitleNav">
+  <hr align="center">
+  <p class="style2" style="text-align:left; "> [<!-- InstanceBeginEditable name="GoToPrevious2" --><a href="page_miscellaneous.html">Go
+        to Previous</a><!-- InstanceEndEditable -->] <span style="padding-left: 15px; "> [<!-- InstanceBeginEditable name="GoToNext2" --><a href="misc/TimeMatching.html">Go
+        to Next</a><!-- InstanceEndEditable -->] </span></p>
+</div>
+</body>
+<!-- InstanceEnd -->
+</html>

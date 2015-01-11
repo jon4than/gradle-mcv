@@ -1,0 +1,249 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><!-- InstanceBegin template="/Templates/mcv_guide.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Actions</title>
+<!-- InstanceEndEditable --><!-- InstanceBeginEditable name="head" -->
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="/mcidas/doc/mcv_guide/mcidasv.css" charset="ISO-8859-1" type="text/css">
+<!-- InstanceBeginEditable name="CurrentFile" -->
+<script language="javascript" type="text/javascript">
+function setParentPage() { if (parent.setPage) parent.setPage('misc/Actions.html',true); }
+</script>
+<!-- InstanceEndEditable -->
+<style type="text/css">
+<!--
+.style1 {font-size: large;}
+.style2 {font-size: small;}
+-->
+</style>
+</head>
+<body onLoad="setParentPage();">
+<div class="TopTitleNav">
+  <p class="style2" style="text-align:left; "> 
+  	[<!-- InstanceBeginEditable name="GoToPrevious" --><a href="Xgrf.html">Go to Previous</a><!-- InstanceEndEditable -->]
+	<span style="padding-left: 15px; "> 
+	[<!-- InstanceBeginEditable name="GoToNext" --><a href="CommandLineArguments.html">Go to Next</a><!-- InstanceEndEditable -->] 
+	</span> </p>
+  <hr align="center">
+</div>
+<!-- InstanceBeginEditable name="MainContent" -->
+<div class="pagetitle">Actions</div>
+Below is a list of the actions that can be used in menubars, skins and in the html or qhtml pages.
+<p>To use these in an html or qhtml file simply specify a link with the href:</p>
+<pre>
+action:the_action_id
+</pre>
+e.g.:
+<pre>
+action:bundle.open
+</pre>
+<ul>
+<li><strong>new.datachooser</strong>
+<br>
+Show data sources window</li>
+<br>
+<li><strong>show.dataselector</strong>
+<br>
+Show field selector window</li>
+<br>
+<li><strong>show.dashboard</strong>
+<br>
+Show Data Explorer</li>
+<br>
+<li><strong>ui.closewindow</strong>
+<br>
+Close Window</li>
+<br>
+<li><strong>new.displaywindow</strong>
+<br>
+New view window</li>
+<br>
+<li><strong>bundle.open</strong>
+<br>
+Open a bundle</li>
+<br>
+<li><strong>bundle.save</strong>
+<br>
+Save bundle</li>
+<br>
+<li><strong>bundle.default.save</strong>
+<br>
+Save as default</li>
+<br>
+<li><strong>bundle.default.open</strong>
+<br>
+Reload default bundle</li>
+<br>
+<li><strong>bundle.default.remove</strong>
+<br>
+Delete default bundle</li>
+<br>
+<li><strong>bundle.favorite.save</strong>
+<br>
+Save as favorite bundle</li>
+<br>
+<li><strong>bundle.favorite.manage</strong>
+<br>
+Manage favorites</li>
+<br>
+<li><strong>plugins.install.file</strong>
+<br>
+Install a plugin from a file</li>
+<br>
+<li><strong>plugins.install.url</strong>
+<br>
+Install a plugin from a url</li>
+<br>
+<li><strong>plugins.manage</strong>
+<br>
+List plugins</li>
+<br>
+<li><strong>plugins.create</strong>
+<br>
+Create plugin</li>
+<br>
+<li><strong>edit.preferences</strong>
+<br>
+Edit user preferences</li>
+<br>
+<li><strong>edit.formula.create</strong>
+<br>
+Create formula</li>
+<br>
+<li><strong>edit.formula.import</strong>
+<br>
+Import formula</li>
+<br>
+<li><strong>edit.formula.export</strong>
+<br>
+Export formula</li>
+<br>
+<li><strong>edit.jython</strong>
+<br>
+Edit Jython library</li>
+<br>
+<li><strong>edit.colortables</strong>
+<br>
+Edit color tables</li>
+<br>
+<li><strong>edit.stationmodels</strong>
+<br>
+Edit station models</li>
+<br>
+<li><strong>edit.paramaliases</strong>
+<br>
+Edit parameter aliases</li>
+<br>
+<li><strong>edit.projections</strong>
+<br>
+Edit projections</li>
+<br>
+<li><strong>edit.paramdefaults</strong>
+<br>
+Edit parameter defaults</li>
+<br>
+<li><strong>edit.paramgroups</strong>
+<br>
+Edit parameter groups</li>
+<br>
+<li><strong>edit.autodisplays</strong>
+<br>
+Auto-create displays</li>
+<br>
+<li><strong>edit.views.delete</strong>
+<br>
+Delete Saved Views</li>
+<br>
+<li><strong>edit.removedisplays</strong>
+<br>
+Remove all displays</li>
+<br>
+<li><strong>edit.removedisplaysanddata</strong>
+<br>
+Remove all displays and data</li>
+<br>
+<li><strong>view.reloadalldata</strong>
+<br>
+Reload all data sources</li>
+<br>
+<li><strong>edit.removedata</strong>
+<br>
+Remove all data sources</li>
+<br>
+<li><strong>exit</strong>
+<br>
+Exit</li>
+<br>
+<li><strong>idv.stopload</strong>
+<br>
+Stop current loads</li>
+<br>
+<li><strong>capture.all</strong>
+<br>
+Capture All Images</li>
+<br>
+<li><strong>collab.showcapture</strong>
+<br>
+Event Capture</li>
+<br>
+<li><strong>collab.showwindow</strong>
+<br>
+Show Window</li>
+<br>
+<li><strong>collab.shareall</strong>
+<br>
+Share All State</li>
+<br>
+<li><strong>help.introduction</strong>
+<br>
+Show help</li>
+<br>
+<li><strong>help.showconsole</strong>
+<br>
+Show Console</li>
+<br>
+<li><strong>help.showhelptips</strong>
+<br>
+Show Help Tips</li>
+<br>
+<li><strong>help.showsupportform</strong>
+<br>
+Submit support request</li>
+<br>
+<li><strong>help.showabout</strong>
+<br>
+About...</li>
+<br>
+<li><strong>display.curvedrawer</strong>
+<br>
+Create Drawing Control</li>
+<br>
+<li><strong>display.locationindicator</strong>
+<br>
+Create Location Indicator</li>
+<br>
+<li><strong>display.backgroundimage</strong>
+<br>
+Create Background Image</li>
+<br>
+<li><strong>display.rangeandbearing</strong>
+<br>
+Create Range and Bearing</li>
+<br>
+<li><strong>display.imagemovie</strong>
+<br>
+Create Image Movie Display</li>
+</ul>
+<!-- InstanceEndEditable -->
+<div class="BottomTitleNav">
+  <hr align="center">
+  <p class="style2" style="text-align:left; "> 
+  	[<!-- InstanceBeginEditable name="GoToPrevious2" --><a href="Xgrf.html">Go to Previous</a><!-- InstanceEndEditable -->] 
+	<span style="padding-left: 15px; "> 
+	[<!-- InstanceBeginEditable name="GoToNext2" --><a href="CommandLineArguments.html">Go to Next</a><!-- InstanceEndEditable -->] 
+	</span></p>
+</div>
+</body>
+<!-- InstanceEnd --></html>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<servers>
+<!--
+Each server tag has a name and an optional description.
+
+Each server tag can contain any number of group tags or type tags.
+For top-level group tags they need to have a type attribute (e.g.,
+one of image, radar, grid, point, etc.) They can either have a comma
+separated names attribute or a single name attribute. For the case with a single
+name attribute there can also be a description.
+
+You can also group a number of group tags under a type tag. where the type tag
+has a name attribute. In this case the group tags do not need the type attribute (
+they essentially get it from their container type tag.
+
+This file overrides IDV addeservers.xml
+-->
+  
+  <server name="adde.ssec.wisc.edu" active="true">
+    <group
+            names="RTIMAGES,BLIZZARD,CIMSS,GINIEAST,GINIWEST,GINICOMP,NEXRCOMP,TOPO,GLOBAL, GINIALL, IMAGEALL, NEXRCALL"
+            type="image"/>
+    <group
+            names="RTNEXRAD, NEXRALL"
+            type="radar"/>
+    <group
+            names="RTWXTEXT"
+            type="wxtext"/>
+  </server>
+  
+  <!-- NON-SSEC servers below -->
+
+  <server name="adde.ucar.edu">
+    <group
+       names="RTIMAGES,BLIZZARD,CIMSS,GINIALL,GINIEAST,GINIWEST,GINICOMP,GLOBAL,IMAGEALL,NEXRCALL,NEXRCOMP,TOPO"
+       type="image"/>
+    <group
+       names="RTNEXRAD,NEXRALL"
+       type="radar"/>
+     <group
+       names="RTPTSRC"
+       type="point"/>
+     <group
+       names="RTWXTEXT"
+       type="text"/>
+  </server>
+  <server name="atm.ucar.edu" active="true">
+    <group
+            names="RTIMAGES,BLIZZARD,CIMSS,GINIEAST,GINIWEST,GINICOMP,NEXRCOMP,TOPO,GLOBAL,GINIALL,IMAGEALL,NEXRCALL"
+            type="image"/>
+    <group
+            names="RTNEXRAD,NEXRALL"
+            type="radar"/>
+     <group
+            names="RTPTSRC"
+            type="point"/>
+    <group
+            names="RTWXTEXT"
+            type="wxtext"/>
+    <group
+            names="RTWXTEXT"
+            type="text"/>
+  </server>
+  <server name="goessouth.unidata.ucar.edu">
+    <group
+       names="SOUTH"
+       type="image"/>
+  </server>
+
+<!--   <server name="idd.unl.edu">
+    <group
+       names="RTIMAGES,BLIZZARD,CIMSS,GINIEAST,GINIWEST,GINICOMP,NEXRCOMP,TOPO"
+       type="image"/>
+    <group
+       names="RTNEXRAD"
+       type="radar"/>
+     <group
+       names="RTPTSRC"
+       type="point"/>
+     <group
+       names="RTWXTEXT"
+       type="text"/>
+  </server> -->
+  
+  <server name="rets1.ssec.wisc.edu">
+    <group
+       names="CIMSSP1"
+       type="image"/>
+  </server>
+
+  <server name="satepsanone.nesdis.noaa.gov">
+    <group
+       names="PUB"
+       type="image"/>
+  </server>
+  
+  <server name="stratus.al.noaa.gov">
+    <group
+       names="RTIMAGES,CIMSS,GINIEAST,GINIWEST,TOPO"
+       type="image"/>
+    <group
+       names="RTGRIDS"
+       type="grid"/>
+    <group
+       names="RTNEXRAD"
+       type="radar"/>
+     <group
+       names="RTPTSRC"
+       type="point"/>
+     <group
+       names="RTWXTEXT"
+       type="text"/>
+  </server>
+  
+  <server name="weather2.admin.niu.edu">
+     <group
+       names="RTPTSRC"
+       type="point"/>
+     <group
+       names="RTWXTEXT"
+       type="text"/>
+  </server>
+  
+<!--   <server name="twister.millersville.edu">
+    <group
+       names="CIMSS,GINICOMP,GINIEAST,GINIWEST,NEXRCOMP,RTIMAGES,TOPO"
+       type="image"/>
+  </server>
+    
+  <server name="weather2.admin.niu.edu">
+    <group
+       names="GINICOMP,GINIEAST,GINIWEST"
+       type="image"/>
+     <group
+       names="RTPTSRC"
+       type="point"/>
+     <group
+       names="RTWXTEXT"
+       type="text"/>
+  </server>
+  
+  <server name="weather3.admin.niu.edu">
+    <group
+       names="RTIMAGES,NEXRCOMP,TOPO"
+       type="image"/>
+    <group
+       names="RTNEXRAD"
+       type="radar"/>
+     <group
+       names="RTPTSRC"
+       type="point"/>
+     <group
+       names="RTWXTEXT"
+       type="text"/>
+  </server>-->
+  
+</servers>

@@ -1,0 +1,347 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><!-- InstanceBegin template="/Templates/mcv_guide.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Description of Formulas - Satellite</title>
+<!-- InstanceEndEditable --><!-- InstanceBeginEditable name="head" -->
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="/mcidas/doc/mcv_guide/mcidasv.css" charset="ISO-8859-1" type="text/css">
+<!-- InstanceBeginEditable name="CurrentFile" -->
+<script language="javascript" type="text/javascript">
+function setParentPage() { if (parent.setPage) parent.setPage('tools/SatelliteFormulas.html',true); }
+</script>
+<!-- InstanceEndEditable -->
+<style type="text/css">
+<!--
+.style1 {font-size: large;}
+.style2 {font-size: small;}
+-->
+</style>
+</head>
+<body onLoad="setParentPage();">
+<div class="TopTitleNav">
+  <p class="style2" style="text-align:left; "> 
+  	[<!-- InstanceBeginEditable name="GoToPrevious" --><a href="MapFormulas.html">Go to Previous</a><!-- InstanceEndEditable -->]
+	<span style="padding-left: 15px; "> 
+	[<!-- InstanceBeginEditable name="GoToNext" --><a href="GridFormulas.html">Go to Next</a><!-- InstanceEndEditable -->] 
+	</span> </p>
+  <hr align="center">
+</div>
+<!-- InstanceBeginEditable name="MainContent" -->
+<div class="pagetitle">Description of Formulas - Satellite</div>
+<p>The following describes each formula included in the SEVIRI RGB section
+  of McIDAS-V. These formulas are designed to work with SEVIRI MSG satellite data, although they are also applicable for equivalent channels of other imagers.</p>
+<p><strong>SEVIRI RGB</strong></p>
+<p>The SEVIRI RGB Manual band selection formulas allow you to select your desired wavelengths for each parameter. A recommendation for the wavelength to select for each field will be shown in the Field Selector window. The data from the wavelengths you select will be plugged into the formula for each parameter to produce the image in the Main Display window.</p>
+<ul class="propertylist">
+    <li class="propertylistitem"><strong>ACMP (cloud microphysics tuned for low cloud &amp; fog) - </strong>Displays all-day (24 hour) cloud microphysics data tuned to mid-latitude low cloud and fog. This formula is based on absorbing IR channels only.</li>
+    <li class="propertylistitem">
+        <table id="mapformulas2" cellpadding="0" cellspacing="0" border="1">
+            <tr>
+                <td colspan="1"><strong>Field</strong></td>
+                <td width="300"><strong>Definition </strong>                
+            </tr>
+            <tr>
+                <td width="81" colspan="1" rowspan="1" valign="top"><p><em>IR8.7</em></p></td>
+                <td width="300" colspan="1" rowspan="1" valign="top" nowrap><p>8.7 um IR Total Water, Cloud Phase, Dust</p></td>
+            </tr>
+            <tr>
+                <td width="81" colspan="1" rowspan="1" valign="top"><p><em>IR10.8</em></p></td>
+                <td width="300" colspan="1" rowspan="1" valign="top"><p>10.8 um IR Surface/Cloud-top Temp</p></td>
+            </tr>
+            <tr>
+                <td width="81" colspan="1" rowspan="1" valign="top"><p><em>IR12.0</em></p></td>
+                <td width="300" colspan="1" rowspan="1" valign="top"><p>12.0 um IR SFC/Cloud Temp, Low-level WV</p></td>
+            </tr>
+        </table>
+    </li>
+    <li class="propertylistitem"><strong>AIRM (air mass) - </strong>Displays air mass data.  This formula is based on absorbing IR channels only.</li>
+    <li class="propertylistitem"><table id="mapformulas" cellpadding="0" cellspacing="0" border="1">
+  <tr>
+    <td colspan="1"><strong>Field</strong></td>
+   <td width="300"><strong>Definition
+   </strong></tr>
+   <tr>
+   <td width="81" colspan="1" rowspan="1" valign="top">
+   <p><em>WV6.2 </em></p>
+   </td>
+   <td width="300" colspan="1" rowspan="1" valign="top" nowrap>
+   <p>6.2 um IR Upper-level Water Vapor</p>
+   </td>
+   </tr>
+   <tr>
+   <td width="81" colspan="1" rowspan="1" valign="top">
+   <p><em>WV7.3</em></p>
+   </td>
+   <td width="300" colspan="1" rowspan="1" valign="top">
+   <p>7.3 um IR Mid-level Water Vapor</p>
+   </td>
+   </tr>
+   <tr>
+   <td width="81" colspan="1" rowspan="1" valign="top">
+   <p><em>IR9.7</em></p>
+   </td>
+   <td width="300" colspan="1" rowspan="1" valign="top">
+   <p>9.7 um Ozone</p>
+   </td>
+   </tr>
+      <tr>
+   <td width="81" colspan="1" rowspan="1" valign="top">
+   <p><em>IR10.8</em></p>
+   </td>
+   <td width="300" colspan="1" rowspan="1" valign="top">
+   <p>10.8 um IR Surface/Cloud-top Temp</p>
+   </td>
+   </tr>
+</table></li>
+<li class="propertylistitem"><strong>DUST (cloud microphysics tuned for dust) - </strong>Displays cloud microphysics data tuned to mineral dust. This formula is based on absorbing IR channels only.</li>
+<li class="propertylistitem"><table id="mapformulas" cellpadding="0" cellspacing="0" border="1">
+  <tr>
+    <td colspan="1"><strong>Field</strong></td>
+   <td width="300"><strong>Definition
+   </strong></tr>
+   <tr>
+   <td width="81" colspan="1" rowspan="1" valign="top">
+   <p><em>IR</em>8.7</p>
+   </td>
+   <td width="300" colspan="1" rowspan="1" valign="top" nowrap>
+   <p>8.7 um IR Total Water, Cloud Phase, Dust</p>
+   </td>
+   </tr>
+   <tr>
+   <td width="81" colspan="1" rowspan="1" valign="top">
+   <p><em>IR10.8</em></p>
+   </td>
+   <td width="300" colspan="1" rowspan="1" valign="top">
+   <p>10.8 um IR Surface/Cloud-top Temp</p>
+   </td>
+   </tr>
+   <tr>
+   <td width="81" colspan="1" rowspan="1" valign="top">
+   <p><em>IR12.0</em></p>
+   </td>
+   <td width="300" colspan="1" rowspan="1" valign="top">
+   <p>12.0 um IR SFC/Cloud Temp, Low-level WV</p>
+   </td>
+   </tr>
+</table></li>
+<li class="propertylistitem"><strong>GCMP (generic cloud microphysics) -</strong> Displays generic cloud microphysics data. After creating the display, you can change the numerical RGB range values. You can also set individual gamma values. This formula is based on absorbing IR channels only.</li>
+<li class="propertylistitem">
+    <table id="mapformulas4" cellpadding="0" cellspacing="0" border="1">
+        <tr>
+            <td colspan="1"><strong>Field</strong></td>
+            <td width="300"><strong>Definition </strong>            
+        </tr>
+        <tr>
+            <td width="81" colspan="1" rowspan="1" valign="top"><p><em>IR</em>8.7</p></td>
+            <td width="300" colspan="1" rowspan="1" valign="top" nowrap><p>8.7 um IR Total Water, Cloud Phase, Dust</p></td>
+        </tr>
+        <tr>
+            <td width="81" colspan="1" rowspan="1" valign="top"><p><em>IR10.8</em></p></td>
+            <td width="300" colspan="1" rowspan="1" valign="top"><p>10.8 um IR Surface/Cloud-top Temp</p></td>
+        </tr>
+        <tr>
+            <td width="81" colspan="1" rowspan="1" valign="top"><p><em>IR12.0</em></p></td>
+            <td width="300" colspan="1" rowspan="1" valign="top"><p>12.0 um IR SFC/Cloud Temp, Low-level WV</p></td>
+        </tr>
+    </table>
+</li>
+<li class="propertylistitem"><strong>GCON (generic enhancement of SCON) -</strong> Displays a generic enhancement of SCON. After creating the display, you can change the numerical RGB range values. You can also set individual gamma values. This formula is limited to use during the daytime.</li>
+<li class="propertylistitem">
+    <table id="mapformulas5" cellpadding="0" cellspacing="0" border="1">
+        <tr>
+            <td colspan="1"><strong>Field</strong></td>
+            <td width="300"><strong>Definition </strong>            
+        </tr>
+        <tr>
+            <td width="81" colspan="1" rowspan="1" valign="top"><p><em>VIS0.6</em></p></td>
+            <td width="300" colspan="1" rowspan="1" valign="top" nowrap><p>0.6 um VIS Cloud and Surface Features</p></td>
+        </tr>
+        <tr>
+            <td width="81" colspan="1" rowspan="1" valign="top"><p><em>NIR1.6</em></p></td>
+            <td width="300" colspan="1" rowspan="1" valign="top"><p>1.6 um Near IR Surface, Cloud Phase</p></td>
+        </tr>
+        <tr>
+            <td width="81" colspan="1" rowspan="1" valign="top"><p><em>IR3.9</em></p></td>
+            <td width="300" colspan="1" rowspan="1" valign="top"><p>3.9 um IR Low Cloud/Fog, Fire Detection</p></td>
+        </tr>
+                <tr>
+            <td width="81" colspan="1" rowspan="1" valign="top"><p><em>IR6.2</em></p></td>
+            <td width="300" colspan="1" rowspan="1" valign="top" nowrap><p>6.2 um IR Upper-level Water Vapor</p></td>
+        </tr>
+        <tr>
+            <td width="81" colspan="1" rowspan="1" valign="top"><p><em>IR7.3</em></p></td>
+            <td width="300" colspan="1" rowspan="1" valign="top"><p>7.3 um IR Mid-level Water Vapor</p></td>
+        </tr>
+        <tr>
+            <td width="81" colspan="1" rowspan="1" valign="top"><p><em>IR10.8</em></p></td>
+            <td width="300" colspan="1" rowspan="1" valign="top"><p> 10.8 um IR SFC/Cloud-top Temp</p></td>
+        </tr>
+    </table>
+</li>
+<li class="propertylistitem"><strong>NCMP (nighttime cloud microphysics, IR8.7 to IR3.9) - </strong>Displays nighttime cloud microphysics data.</li>
+<li class="propertylistitem">
+    <table id="mapformulas6" cellpadding="0" cellspacing="0" border="1">
+        <tr>
+            <td colspan="1"><strong>Field</strong></td>
+            <td width="300"><strong>Definition </strong>            
+        </tr>
+        <tr>
+            <td width="81" colspan="1" rowspan="1" valign="top"><p><em>IR3.9</em></p></td>
+            <td width="300" colspan="1" rowspan="1" valign="top" nowrap><p>3.9 um IR Low Cloud/Fog, Fire Detection</p></td>
+        </tr>
+        <tr>
+            <td width="81" colspan="1" rowspan="1" valign="top"><p><em>IR10.8</em></p></td>
+            <td width="300" colspan="1" rowspan="1" valign="top"><p>10.8 um IR Surface/Cloud-top Temp</p></td>
+        </tr>
+        <tr>
+            <td width="81" colspan="1" rowspan="1" valign="top"><p><em>IR12.0</em></p></td>
+            <td width="300" colspan="1" rowspan="1" valign="top"><p>12.0 um IR SFC/Cloud Temp, Low-level WV</p></td>
+        </tr>
+    </table>
+</li>
+<li class="propertylistitem"><strong>NCOG (generic NCOL) -</strong> Displays a generic enhancement of NCOL. After creating the display, you can change the numerical RGB range values. You can also set individual gamma values. This formula is based on solar channels only.</li>
+<li class="propertylistitem">
+    <table id="mapformulas7" cellpadding="0" cellspacing="0" border="1">
+        <tr>
+            <td colspan="1"><strong>Field</strong></td>
+            <td width="300"><strong>Definition </strong>            
+        </tr>
+        <tr>
+            <td width="81" colspan="1" rowspan="1" valign="top"><p><em>VIS0.6</em></p></td>
+            <td width="300" colspan="1" rowspan="1" valign="top" nowrap><p>0.6 um VIS Cloud and Surface Features</p></td>
+        </tr>
+        <tr>
+            <td width="81" colspan="1" rowspan="1" valign="top"><p><em>VIS0.8</em></p></td>
+            <td width="300" colspan="1" rowspan="1" valign="top"><p>0.8 um VIS Aerosols over Water, Veg</p></td>
+        </tr>
+        <tr>
+            <td width="81" colspan="1" rowspan="1" valign="top"><p><em>NIR1.6</em></p></td>
+            <td width="300" colspan="1" rowspan="1" valign="top"><p>1.6um Near IR Surface, Cloud Phase</p></td>
+        </tr>
+    </table>
+</li>
+<li class="propertylistitem"><strong>NCOL (natural colors) - </strong>Displays natural colors data. The minimum and maximum reflectivity values are used to rescale the color beams. The minrefl and maxrefl values should be between 0 and 100. This formula is based on solar channels only.</li>
+<li class="propertylistitem"><table id="mapformulas" cellpadding="0" cellspacing="0" border="1">
+  <tr>
+    <td colspan="1"><strong>Field</strong></td>
+   <td width="300"><strong>Definition
+   </strong></tr>
+   <tr>
+   <td width="81" colspan="1" rowspan="1" valign="top">
+   <p><em>minrefl</em></p>
+   </td>
+   <td width="300" colspan="1" rowspan="1" valign="top" nowrap>
+   <p>Minimum Reflectivity Limit (% reflectivity)</p>
+   </td>
+   </tr>
+   <tr>
+   <td width="81" colspan="1" rowspan="1" valign="top">
+   <p><em>maxrefl</em></p>
+   </td>
+   <td width="300" colspan="1" rowspan="1" valign="top">
+   <p>Maximum Reflectivity Limit (% reflectivity)</p>
+   </td>
+   </tr>
+   <tr>
+   <td width="81" colspan="1" rowspan="1" valign="top">
+   <p><em>VIS0.6</em></p>
+   </td>
+   <td width="300" colspan="1" rowspan="1" valign="top">
+   <p>0.6 um VIS Cloud and Surface Features</p>
+   </td>
+   </tr>
+      <tr>
+   <td width="81" colspan="1" rowspan="1" valign="top">
+   <p><em>VIS0.8</em></p>
+   </td>
+   <td width="300" colspan="1" rowspan="1" valign="top">
+   <p>0.8 um VIS Aerosols over Water, Veg</p>
+   </td>
+   </tr>
+         <tr>
+   <td width="81" colspan="1" rowspan="1" valign="top">
+   <p><em>NIR1.6</em></p>
+   </td>
+   <td width="300" colspan="1" rowspan="1" valign="top">
+   <p>1.6 um Near IR- Surface, cloud phase</p>
+   </td>
+   </tr>
+</table></li>
+<li class="propertylistitem"><strong>SCON (severe convection, daytime only) -</strong> Displays severe convection data.  This formula is limited to use during the daytime.</li>
+<li class="propertylistitem">
+    <table id="mapformulas3" cellpadding="0" cellspacing="0" border="1">
+        <tr>
+            <td colspan="1"><strong>Field</strong></td>
+            <td width="300"><strong>Definition </strong>            
+        </tr>
+        <tr>
+            <td width="81" colspan="1" rowspan="1" valign="top"><p><em>VIS0.6</em></p></td>
+            <td width="300" colspan="1" rowspan="1" valign="top" nowrap><p>0.6 um VIS Cloud and Surface Features</p></td>
+        </tr>
+        <tr>
+            <td width="81" colspan="1" rowspan="1" valign="top"><p><em>NIR1.6</em></p></td>
+            <td width="300" colspan="1" rowspan="1" valign="top"><p>1.6 um Near IR Surface, Cloud Phase</p></td>
+        </tr>
+        <tr>
+            <td width="81" colspan="1" rowspan="1" valign="top"><p><em>IR3.9</em></p></td>
+            <td width="300" colspan="1" rowspan="1" valign="top"><p>3.9 um IR Low Cloud/Fog, Fire Detection</p></td>
+        </tr>
+        <tr>
+            <td width="81" colspan="1" rowspan="1" valign="top"><p><em>WV6.2</em></p></td>
+            <td width="300" colspan="1" rowspan="1" valign="top"><p>6.2 um IR Upper-level Water Vapor</p></td>
+        </tr>
+        <tr>
+            <td width="81" colspan="1" rowspan="1" valign="top"><p><em>WV7.3</em></p></td>
+            <td width="300" colspan="1" rowspan="1" valign="top"><p>7.3 um IR Mid-level Water Vapor</p></td>
+        </tr>
+        <tr>
+            <td width="81" colspan="1" rowspan="1" valign="top"><p><em>IR10.8</em></p></td>
+            <td width="300" colspan="1" rowspan="1" valign="top"><p>10.8 um IR Surface/Cloud-top Temp</p></td>
+        </tr>
+    </table>
+</li>
+<li class="propertylistitem"><strong>VOLC (cloud microphysics turned for volcanic ash &amp; SO2) - </strong>Displays cloud microphysics data tuned to volcanic ash and SO2.  This formula is based on absorbing IR channels only.</li>
+<li class="propertylistitem"><table id="mapformulas" cellpadding="0" cellspacing="0" border="1">
+  <tr>
+    <td colspan="1"><strong>Field</strong></td>
+   <td width="300"><strong>Definition
+   </strong></tr>
+   <tr>
+   <td width="81" colspan="1" rowspan="1" valign="top">
+   <p><em>IR8.7</em></p>
+   </td>
+   <td width="300" colspan="1" rowspan="1" valign="top" nowrap>
+   <p>8.7 um IR Total Water, Cloud Phase, Dust</p>
+   </td>
+   </tr>
+   <tr>
+   <td width="81" colspan="1" rowspan="1" valign="top">
+   <p><em>IR10.8</em></p>
+   </td>
+   <td width="300" colspan="1" rowspan="1" valign="top">
+   <p>10.8 um IR Surface/Cloud-top Temp</p>
+   </td>
+   </tr>
+   <tr>
+   <td width="81" colspan="1" rowspan="1" valign="top">
+   <p><em>IR12.0</em></p>
+   </td>
+   <td width="300" colspan="1" rowspan="1" valign="top">
+   <p>12.0 um IR SFC/Cloud Temp, Low-level WV</p>
+   </td>
+   </tr>
+</table></li>
+</ul>
+<!-- InstanceEndEditable -->
+<div class="BottomTitleNav">
+  <hr align="center">
+  <p class="style2" style="text-align:left; "> 
+  	[<!-- InstanceBeginEditable name="GoToPrevious2" --><a href="MapFormulas.html">Go to Previous</a><!-- InstanceEndEditable -->] 
+	<span style="padding-left: 15px; "> 
+	[<!-- InstanceBeginEditable name="GoToNext2" --><a href="GridFormulas.html">Go to Next</a><!-- InstanceEndEditable -->] 
+	</span></p>
+</div>
+</body>
+<!-- InstanceEnd --></html>

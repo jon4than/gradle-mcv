@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<derived_parameters>
+  <derived
+     id="cleanFilter"
+     description="Clean Image Filter"
+     formula="cleanFilter(image,fill[isuser=true,type=choice,choices=Average; Min; Max],bline[isuser=true,default=Default],eline[isuser=true,default=Default],pdiff[isuser=true,default=15],ldiff[isuser=true,default=15],stretch[isuser=true,type=choice,choices=Contrast; Histogram],BT_Min[isuser=true,default=0],BT_Max[isuser=true,default=255])"
+     isenduser="true"
+     isdefault="false">
+    <categories>
+      <category
+         display="true"
+         value="Image Filters"/>
+      <category value="IMAGE-*-*"/>
+    </categories>
+    <operands/>
+  </derived>
+  <derived
+     id="cloudFilter"
+     description="Cloud Image Filter"
+     formula="cloudFilter(image1,image2,replace[isuser=true,default=Default], constant[isuser=true,default=0],stretch[isuser=true,type=choice,choices=Contrast; Histogram],BT_Min[isuser=true,default=0],BT_Max[isuser=true,default=255])"
+     isenduser="true"
+     isdefault="false">
+    <categories>
+      <category
+         display="true"
+         value="Image Filters"/>
+      <category value="IMAGE-*-*"/>
+    </categories>
+    <operands/>
+  </derived>
+  <derived
+     id="coreFilter"
+     description="Core Image Filter"
+     formula="coreFilter(image1,image2,brkpoint1[isuser=true,default=Default], brkpoint2[isuser=true,default=Default],replace1[isuser=true,default=Default],replace2[isuser=true,default=Default],stretch[isuser=true,type=choice,choices=Contrast; Histogram],BT_Min[isuser=true,default=0],BT_Max[isuser=true,default=255])"
+     isenduser="true"
+     isdefault="false">
+    <categories>
+      <category
+         display="true"
+         value="Image Filters"/>
+      <category value="IMAGE-*-*"/>
+    </categories>
+    <operands/>
+  </derived>
+  <derived
+     id="discriminateFilter"
+     description="Discriminate Image Filter"
+     formula="discriminateFilter(image1,image2,brkpoint1[isuser=true,default=Default], brkpoint2[isuser=true,default=Default],brkpoint3[isuser=true,default=Default], brkpoint4[isuser=true,default=Default],replace[isuser=true,default=Default],stretch[isuser=true,type=choice,choices=Contrast; Histogram],BT_Min[isuser=true,default=0],BT_Max[isuser=true,default=255])"
+     isenduser="true"
+     isdefault="false">
+    <categories>
+      <category
+         display="true"
+         value="Image Filters"/>
+      <category value="IMAGE-*-*"/>
+    </categories>
+    <operands/>
+  </derived>
+  <derived
+     id="gradFilter"
+     description="Gradient Image Filter"
+     formula="gradientFilter(image,stretch[isuser=true,type=choice,choices=Contrast; Histogram],BT_Min[isuser=true,default=0],BT_Max[isuser=true,default=255])"
+     isenduser="true"
+     isdefault="false">
+    <categories>
+      <category
+         display="true"
+         value="Image Filters"/>
+      <category value="IMAGE-*-*"/>
+    </categories>
+    <operands/>
+  </derived>
+  <derived
+     id="lowPassFilter"
+     description="Low Pass Image Filter"
+     formula="passFilter(image,'Low',radius[isuser=true,default=50], leak[isuser=true,default=100],stretch[isuser=true,type=choice,choices=Contrast; Histogram],BT_Min[isuser=true,default=0],BT_Max[isuser=true,default=255])"
+     isenduser="true"
+     isdefault="false">
+    <categories>
+      <category
+         display="true"
+         value="Image Filters"/>
+      <category value="IMAGE-*-*"/>
+    </categories>
+    <operands/>
+  </derived>
+  <derived
+     id="highPassFilter"
+     description="High Pass Image Filter"
+     formula="passFilter(image,'High',radius[isuser=true,default=50], leak[isuser=true,default=100],stretch[isuser=true,type=choice,choices=Contrast; Histogram],BT_Min[isuser=true,default=0],BT_Max[isuser=true,default=255])"
+     isenduser="true"
+     isdefault="false">
+    <categories>
+      <category
+         display="true"
+         value="Image Filters"/>
+      <category value="IMAGE-*-*"/>
+    </categories>
+    <operands/>
+  </derived>
+  <derived
+     id="lowPass2DFilter"
+     description="Low Pass 2D Image Filter"
+     formula="lowPass2DFilter(image,linecoef[isuser=true,default=0.5], elecoef[isuser=true,default=0.5],stretch[isuser=true,type=choice,choices=Contrast; Histogram],BT_Min[isuser=true,default=0],BT_Max[isuser=true,default=255])"
+     isenduser="true"
+     isdefault="false">
+    <categories>
+      <category
+         display="true"
+         value="Image Filters"/>
+      <category value="IMAGE-*-*"/>
+      <category value="GRID-2D-*"/>
+    </categories>
+    <operands/>
+  </derived>
+  <derived
+     id="highPass2DFilter"
+     description="High Pass 2D Image Filter"
+     formula="highPass2DFilter(image,stretch[isuser=true,type=choice,choices=Contrast; Histogram],BT_Min[isuser=true,default=0],BT_Max[isuser=true,default=255])"
+     isenduser="true"
+     isdefault="false">
+    <categories>
+      <category
+         display="true"
+         value="Image Filters"/>
+      <category value="IMAGE-*-*"/>
+      <category value="GRID-2D-*"/>
+    </categories>
+    <operands/>
+  </derived>
+  <derived
+     id="holeFilter"
+     description="Hole Image Filter"
+     formula="holeFilter(image,brkpoint1[isuser=true,default=0], brkpoint2[isuser=true,default=1],stretch[isuser=true,type=choice,choices=Contrast; Histogram],BT_Min[isuser=true,default=0],BT_Max[isuser=true,default=255])"
+     isenduser="true"
+     isdefault="false">
+    <categories>
+      <category
+         display="true"
+         value="Image Filters"/>
+      <category value="IMAGE-*-*"/>
+    </categories>
+    <operands/>
+  </derived>
+  <derived
+     id="mergeFilter"
+     description="Merge Image Filter"
+     formula="mergeFilter(image1,image2,brkpoint1[isuser=true,default=Default], brkpoint2[isuser=true,default=Default],constant[isuser=true,default=0],stretch[isuser=true,type=choice,choices=Contrast; Histogram],BT_Min[isuser=true,default=0],BT_Max[isuser=true,default=255])"
+     isenduser="true"
+     isdefault="false">
+    <categories>
+      <category
+         display="true"
+         value="Image Filters"/>
+      <category value="IMAGE-*-*"/>
+    </categories>
+    <operands/>
+  </derived>
+  <derived
+     id="replaceFilter"
+     description="Replace Image Filter"
+     formula="replaceFilter(image,New_Value[isuser=true,default=0],Old_Value[isuser=true,default=Default],stretch[isuser=true,type=choice,choices=Contrast; Histogram],BT_Min[isuser=true,default=0],BT_Max[isuser=true,default=255])"
+     isenduser="true"
+     isdefault="false">
+    <categories>
+      <category
+         display="true"
+         value="Image Filters"/>
+      <category value="IMAGE-*-*"/>
+    </categories>
+    <operands/>
+  </derived>
+    <derived
+     id="shotFilter"
+     description="Shot Image Filter"
+     formula="shotFilter(image,bline[isuser=true,default=Default],eline[isuser=true,default=Default],pdiff[isuser=true,default=15],stretch[isuser=true,type=choice,choices=Contrast; Histogram],BT_Min[isuser=true,default=0],BT_Max[isuser=true,default=255])"
+     isenduser="true"
+     isdefault="false">
+    <categories>
+      <category
+         display="true"
+         value="Image Filters"/>
+      <category value="IMAGE-*-*"/>
+    </categories>
+    <operands/>
+  </derived>
+  <derived description="Three Color (RGB) Image (Auto-scale)" formula="mycombineRGB(red, green, blue)" id="RGBautoscale" isdefault="false" isenduser="true">
+    <categories>
+      <category display="true" value="Imagery"/>
+      <category value="display:rgbcomposite"/>
+    </categories>
+    <operands categories=""/>
+  </derived>
+  <derived description="Mask Value" formula="mask(inputFieldForMask,comparison[isuser=true,type=choice,choices=&lt;;&gt;;==;=&lt;;=&gt;],float(cutoff[isuser=true,default=9999]),bool(float(useNaN[isuser=true,default=1])))*displayFieldToBeMasked" id="mask" isdefault="false" isenduser="true">
+    <categories>
+      <category display="true" value="Imagery"/>
+      <category value="display:readout.probe"/>
+      <category value="display:scatter"/>
+      <category value="display:imagesequence"/>
+      <category value="display:imagedisplay"/>
+      <category value="display:imagecontour"/>
+      <category value="display:imagedisplayoverz"/>
+    </categories>
+    <operands categories=""/>
+  </derived>
+  <derived description="Mask Values Within Range" formula="maskWithinRange(inputFieldForMask,float(minValue[isuser=true,default=0]), float(maxValue[isuser=true,default=270]),bool(float(useNan[isuser=true,default=0])))*displayFieldToBeMasked" id="mask" isdefault="false" isenduser="true">
+    <categories>
+      <category display="true" value="Imagery"/>
+      <category value="display:readout.probe"/>
+      <category value="display:scatter"/>
+      <category value="display:imagesequence"/>
+      <category value="display:imagedisplay"/>
+      <category value="display:imagecontour"/>
+      <category value="display:imagedisplayoverz"/>
+    </categories>
+    <operands categories=""/>
+  </derived>
+</derived_parameters>

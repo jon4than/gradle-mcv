@@ -1,0 +1,73 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><!-- InstanceBegin template="/Templates/mcv_guide.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Observations</title>
+<!-- InstanceEndEditable --><!-- InstanceBeginEditable name="head" -->
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="/mcidas/doc/mcv_guide/mcidasv.css" charset="ISO-8859-1" type="text/css">
+<!-- InstanceBeginEditable name="CurrentFile" -->
+<script language="javascript" type="text/javascript">
+function setParentPage() { if (parent.setPage) parent.setPage('examples/Observations.html',true); }
+</script>
+<!-- InstanceEndEditable -->
+<style type="text/css">
+<!--
+.style1 {font-size: large;}
+.style2 {font-size: small;}
+-->
+</style>
+</head>
+<body onLoad="setParentPage();">
+<div class="TopTitleNav">
+  <p class="style2" style="text-align:left; "> 
+  	[<!-- InstanceBeginEditable name="GoToPrevious" --><a href="FlowDisplays.html">Go to Previous</a><!-- InstanceEndEditable -->]
+	<span style="padding-left: 15px; "> 
+	[<!-- InstanceBeginEditable name="GoToNext" --><a href="Miscellaneous.html">Go to Next</a><!-- InstanceEndEditable -->] 
+	</span> </p>
+  <hr align="center">
+</div>
+<!-- InstanceBeginEditable name="MainContent" -->
+<div class="pagetitle">Observations</div>
+<ul class="childlist">
+<li><a href="#obs">Point Data Displays</a></li>
+<li><a href="#track">Track Displays</a></li>
+<li><a href="#frontpositions">Front Positions</a></li>
+</ul>
+<a name="obs" id="obs"></a>
+<div class="pagesubtitle">Point Data Displays</div>
+<p>You can make plots of point data such as meteorological surface (METAR) and synoptic surface weather station observations.</p>
+<div class="images"><img src="../controls/images/StationModelControlDisplay.gif" alt="Image 1: Point Data Plot"><br>
+<span class="caption">Image 1: Point Data Plot</span></div>
+<p>For more information see <a href="../quickstart/Point.html">Displaying Surface and Upper Air Point Data </a>. You can change the plot
+    layout with the <a href="../tools/StationModelEditor.html">Station
+    Model Editor</a>. </p>
+<p>You can plot non-meteorological point data as well. The
+    image below depicts the locations of earthquakes, sized by magnitude and
+    colored by depth. Earthquake data can be obtained from the U.S. Geological Survey (USGS) in Google Earth (KMZ) format and can be loaded into McIDAS-V in the <a href="../data/choosers/FileChooser.html">General-&gt;Files/Directories Chooser</a> with the Data Type of &quot;Google Earth Files KML/KMZ&quot;. Using the <a href="../tools/StationModelEditor.html">Station Model Editor</a>, you can specify how your data will be displayed in the Main Display window.</p>
+<div class="images"><img src="images/Earthquake.gif" alt="Image 2: Locations Display"><br>
+<span class="caption">Image 2: Locations Display</span></div>
+<a name="track" id="track"></a>
+<div class="pagesubtitle">Track Displays</div>
+<p>Aircraft and drifting buoy tracks can be plotted to show the path of the sensor. You can also plot the track data as observations along the track. The track path is brought into McIDAS-V through the <a href="../data/choosers/FileChooser.html">General-&gt;Files/Directories Chooser</a> with the Data Type of &quot;Text Point and Trajectory Data files&quot;. The <a href="../ui/DisplayMenus.html#flythrough">Flythrough</a> feature is invoked in the Main Display Window through the <strong>View-&gt;Flythrough</strong> menu item. You can set the Flythrough to follow the track path by creating and importing an XML file with location (latitude, longitude, and altitude) data via <strong>File-&gt;Import</strong> in the Flythrough window.</p>
+<a name="image1" id="image1"></a>
+<div class="images">
+  <img src="images/PointObTrackDisplay.gif" alt="Image 3: TTrack Colored by Parameter Display with a Flythrough">
+  <br><span class="caption">Image 3: Track Colored by Parameter Display with a Flythrough</span>
+</div>
+<a name="frontpositions" id="frontpositions"></a>
+<div class="pagesubtitle">Front Positions</div>
+<p>Via ADDE, McIDAS-V has the ability to plot a frontal analysis or a forecast of frontal positions. You can create these displays by selecting <strong>Front Positions</strong> in the <strong>Data Sources</strong> tab of the Data Explorer. For more information about this feature, see <a href="../quickstart/Fronts.html">Displaying Fronts</a> and <a href="../controls/FrontControl.html">Front Controls</a>.</p>
+<div class="images"><img src="images/FrontPositions.gif" alt="Image 4: Front Positions" width="574" height="439"><br><span class="caption">Image 4: Front Positions</span></div>
+<!-- InstanceEndEditable -->
+<div class="BottomTitleNav">
+  <hr align="center">
+  <p class="style2" style="text-align:left; "> 
+  	[<!-- InstanceBeginEditable name="GoToPrevious2" --><a href="FlowDisplays.html">Go to Previous</a><!-- InstanceEndEditable -->] 
+	<span style="padding-left: 15px; "> 
+	[<!-- InstanceBeginEditable name="GoToNext2" --><a href="Miscellaneous.html">Go to Next</a><!-- InstanceEndEditable -->] 
+	</span></p>
+</div>
+</body>
+<!-- InstanceEnd --></html>

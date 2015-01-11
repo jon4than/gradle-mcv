@@ -1,0 +1,147 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><!-- InstanceBegin template="/Templates/mcv_guide.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Downloading and Running McIDAS-V</title>
+<!-- InstanceEndEditable --><!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+<link rel="stylesheet" href="/mcidas/doc/mcv_guide/mcidasv.css" charset="ISO-8859-1" type="text/css">
+<!-- InstanceBeginEditable name="CurrentFile" -->
+<script language="javascript" type="text/javascript">
+function setParentPage() { if (parent.setPage) parent.setPage('Starting.html',true); }
+</script>
+<!-- InstanceEndEditable -->
+<style type="text/css">
+<!--
+.style1 {font-size: large;}
+.style2 {font-size: small;}
+-->
+</style>
+</head>
+<body onLoad="setParentPage();">
+<div class="TopTitleNav">
+  <p class="style2" style="text-align:left; "> 
+  	[<!-- InstanceBeginEditable name="GoToPrevious" --><a href="Systems.html">Go
+        to Previous</a><!-- InstanceEndEditable -->]
+	<span style="padding-left: 15px; "> 
+	[<!-- InstanceBeginEditable name="GoToNext" --><a href="data/DataSources.html">Go
+        to Next</a><!-- InstanceEndEditable -->] 
+	</span> </p>
+  <hr align="center">
+</div>
+<!-- InstanceBeginEditable name="MainContent" -->
+<div class="pagetitle">Downloading and Running McIDAS-V</div>
+<p>This page contains information on:</p>
+<ul class="childlist">
+  <li><a href="#download">Downloading McIDAS-V</a></li>
+  <li><a href="#install">Installing McIDAS-V</a></li>
+  <li><a href="#run">Running McIDAS-V</a></li>
+  <li><a href="#memory">Setting Memory Usage</a></li>  
+  <li><a href="#source">Downloading McIDAS-V Source Code</a></li>
+</ul>
+<p>If you have any trouble downloading and installing McIDAS-V, first check the <a href="Faq.html">FAQ</a>,
+  then please report your problem as described in <a href="Support.html">McIDAS-V
+Support</a>.</p>
+<p>For more information on downloading and  using McIDAS-V, please see the Installation and Introduction tutorial on the <a href="../../../software/v/documentation.html"target="_blank">McIDAS-V Documentation Page</a>. Also, see this page for additional tutorials and instructional videos on more advanced subjects.</p>
+<div class="pagesubtitle"><a name="download" id="download"></a> Downloading McIDAS-V</div>
+Check that your system meets the <a href="Systems.html">System Requirements for
+McIDAS-V</a> and <a href="../../../software/v/download.html"target="_blank">download</a> the appropriate
+package for the following operating systems:
+<ul>
+  <li>Linux - 32 bit</li>
+  <li>Linux - 64 bit</li>
+  <li>Mac OS X - Intel</li>
+  <li>Windows</li>
+</ul>
+<p>This file is just the installer and can be placed anywhere
+    on your machine. When you run the installer in the next step, you can then
+    indicate where you want McIDAS-V to be installed.</p>
+<div class="pagesubtitle"><a name="install" id="install"></a>Installing McIDAS-V</div>
+<p>Start the installer by following the instructions appropriate for your operating
+  system:</p><br>
+  <table class="noborder">
+    <tr>
+      <td width="169"><ul class="noindent">
+          <li>Linux</li>
+        </ul></td>
+      <td width="404"><ul class="noindent">
+          <li style="list-style-type:none;">&nbsp; &nbsp;open a terminal window
+            and run <strong>sh ./&lt;installer&gt;.sh</strong></li>
+        </ul></td>
+    </tr>
+    <tr>
+      <td><ul class="noindent">
+          <li>Mac OS X</li>
+        </ul></td>
+      <td><ul class="noindent">
+          <li style="list-style-type:none;">&nbsp; &nbsp;mount the .dmg and double-click
+            the installer</li>
+        </ul></td>
+    </tr>
+    <tr>
+      <td><ul class="noindent">
+          <li>Windows</li>
+        </ul></td>
+      <td><ul class="noindent">
+          <li style="list-style-type:none;">&nbsp; &nbsp;double-click the downloaded <strong>.exe</strong> file</li>
+        </ul></td>
+    </tr>
+    <tr>
+      <td><ul class="noindent">
+          <li>All other UNIX</li>
+        </ul></td>
+      <td><ul class="noindent">
+          <li style="list-style-type:none;">&nbsp; &nbsp;open a terminal window
+            and run <strong>sh ./&lt;installer&gt;.sh</strong></li>
+        </ul></td>
+    </tr>
+  </table>
+<p>A GUI will walk you through the installation steps and allow you to create
+  a program group and/or desktop icon.&nbsp;When McIDAS-V is installed, a McIDAS-V-System directory will be created in your installation directory.&nbsp;This directory contains system files necessary to run McIDAS-V and users should not save files to the McIDAS-V-System directory.</p>
+<p>Note: Windows users should not install McIDAS-V in the <strong>/Program Files</strong> directory as this can lead to permissions problems.</p>
+<p>If an error occurs, please see the <a href="Faq.html"> FAQ</a> for information
+  on solutions to common errors reported by users installing and running McIDAS-V.
+  If you do not see your error listed, please send a support request to <a href="../../../misc/contact.html?mcv" target="_blank">McIDAS-V
+  Support</a>.</p>
+<div class="pagesubtitle"><a name="run" id="run"></a>Running McIDAS-V</div>
+<p><strong>On Mac OS X:</strong></p>
+<blockquote>Double-click on the McIDAS-V shortcut icon that was created in /Applications.</blockquote>
+<h4>On Windows:</h4>
+<blockquote>Double-click on the McIDAS-V shortcut icon that was created on the Desktop.</blockquote>
+<h4>On all other platforms:</h4>
+<blockquote>At the UNIX prompt from the directory where McIDAS-V was installed, run the command: <strong>McIDAS-V-System/runMcV</strong>.</blockquote>
+<p>If an error occurs, please see the <a href="Faq.html"> FAQ</a> for information
+  on solutions to common errors reported by users installing and running McIDAS-V.
+  If you do not see your error listed, send a support request to <a href="../../../misc/contact.html?mcv" target="_blank">McIDAS-V
+  Support</a> or use the Support Request Form in the Help menu of McIDAS-V.</p>
+<p>Note: When McIDAS-V is first run, a <strong>/McIDAS-V</strong> directory will be created in the user path.&nbsp;This directory contains information about user-specified settings as well as XML files for color tables, projections, etc. that are used by McIDAS-V.&nbsp;Users can write files to this directory.</p>
+<div class="pagesubtitle"><a name="memory" id="memory"></a>Setting Memory Usage</div>
+<p>By default, McIDAS-V uses 80% of the available memory on your machine. The
+  maximum amount of memory is determined by the operating system. To manually
+  change the amount of memory used by McIDAS-V, edit the <strong>Maximum Heap
+  Size</strong> in the <strong>Advanced</strong> tab of the Preferences by selecting <strong>Edit-&gt;Preferences...</strong> from
+  the main menu. The new amount of memory will be saved and used in subsequent
+  sessions. For 32 bit operating systems, it is recommended to set this to no
+  more than 1250 MB. The maximum value for 32 bit operating systems is 1536 MB, while 64 bit operating systems can use all of the RAM available.
+  To change the amount of memory used to
+  a percentage, select the percentage option in the <strong><a href="tools/preferences/AdvancedPreferences.html">Advanced</a></strong> tab
+  of the User Preferences by selecting <strong>Edit-&gt;Preferences...</strong> from
+the Main Display window.</p>
+<div class="pagesubtitle"><a name="source" id="source"></a>Downloading McIDAS-V Source Code</div>
+<p>The source code for McIDAS-V is available for <a href="../../../software/v/download.html"target="_blank">download</a>.
+  For instructions on building McIDAS-V from source, see the <a href="misc/SourceBuild.html">Building
+  McIDAS-V from Source</a> document.
+</p>
+<!-- InstanceEndEditable -->
+<div class="BottomTitleNav">
+  <hr align="center">
+  <p class="style2" style="text-align:left; "> 
+  	[<!-- InstanceBeginEditable name="GoToPrevious2" --><a href="Systems.html">Go
+        to Previous</a><!-- InstanceEndEditable -->] 
+	<span style="padding-left: 15px; "> 
+	[<!-- InstanceBeginEditable name="GoToNext2" --><a href="data/DataSources.html">Go
+        to Next</a><!-- InstanceEndEditable -->] 
+	</span></p>
+</div>
+</body>
+<!-- InstanceEnd --></html>

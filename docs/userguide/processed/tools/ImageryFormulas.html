@@ -1,0 +1,141 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- InstanceBegin template="/Templates/mcv_guide.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Description of Formulas - Imagery</title>
+<!-- InstanceEndEditable --><!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+<link rel="stylesheet" href="/mcidas/doc/mcv_guide/mcidasv.css" charset="ISO-8859-1" type="text/css">
+<!-- InstanceBeginEditable name="CurrentFile" -->
+<script language="javascript" type="text/javascript">
+function setParentPage() { if (parent.setPage) parent.setPage('tools/ImageryFormulas.html',true); }
+</script>
+<!-- InstanceEndEditable -->
+<style type="text/css">
+<!--
+.style1 {font-size: large;}
+.style2 {font-size: small;}
+-->
+</style>
+</head>
+<body onLoad="setParentPage();">
+<div class="TopTitleNav">
+  <p class="style2" style="text-align:left; "> [<!-- InstanceBeginEditable name="GoToPrevious" --><a href="ExportFormulas.html">Go
+        to Previous</a><!-- InstanceEndEditable -->] <span style="padding-left: 15px; "> [<!-- InstanceBeginEditable name="GoToNext" --><a href="Jython.html">Go
+        to Next</a><!-- InstanceEndEditable -->] </span> </p>
+  <hr align="center">
+</div>
+<!-- InstanceBeginEditable name="MainContent" -->
+<div class="pagetitle">Description of Formulas - Imagery </div>
+<p>The following describes each formula included in the Imagery Formulas section
+  of McIDAS-V.</p>
+<p><strong>Note:</strong> If the formula you select utilizes a Select Input window&nbsp;to enter values to be used by the formula, you can choose if you want to save these values in a bundle if you wish to create one. Each field of the Select Input window has a <strong>Save in Bundle</strong> option&nbsp;(chosen by default). If you keep this option selected, the value(s) you choose will be stored in the bundle, and if all values are saved, the formula will automatically execute when you load in your bundle without any user input. If you do not save the values in your bundle, the values you use will not be saved, and the formula will not automatically execute without requiring the user to enter/change values.</p>
+<ul class="propertylist">
+<li class="propertylistitem"><strong>Geolocate an Image (Upper Left Lat, Upper Left Lon, Lower Right Lat,
+    Lower Right Lon) -</strong> Takes an image data object and a lat/lon bounding box and adds
+  a lat/lon domain to the data. This formula is commonly used in conjunction
+  with another formula.
+<table id="imageryformulas" cellpadding="0" cellspacing="0" border="1">
+  <tr>
+    <td colspan="1"><strong>Input Parameter</strong></td>
+   <td width="630"><strong>Definition
+   </strong></tr>
+   <tr>
+    <td width="120" colspan="1" rowspan="1" valign="top"><p><em>Upper Left Lat </em></p></td>
+    <td width="510" colspan="2" rowspan="1" valign="top" nowrap><p>Upper left
+        latitude value (default=90).</p></td>
+  </tr>
+  <tr>
+    <td width="120" colspan="1" rowspan="1" valign="top"><p><em>Upper Left Lon </em></p></td>
+    <td width="510" colspan="2" rowspan="1" valign="top" nowrap><p>Upper left
+        longitude value (default=-180).</p></td>
+  </tr>
+  <tr>
+    <td width="120" colspan="1" rowspan="1" valign="top"><p><em>Lower Right Lat </em></p></td>
+    <td width="510" colspan="2" rowspan="1" valign="top" nowrap><p>Lower right
+        latitude value (default=-90).</p></td>
+  </tr>
+  <tr>
+    <td width="120" colspan="1" rowspan="1" valign="top"><p><em>Lower Right Lon </em></p></td>
+    <td width="510" colspan="2" rowspan="1" valign="top" nowrap><p>Lower right
+        longitude value (default=180).</p></td>
+  </tr>
+</table>
+</li>
+<li class="propertylistitem"><strong>Image over topography -</strong> Obtains the latitude coordinate from the grid and returns a grid
+of the latitudes at each point.</li>
+<li class="propertylistitem"><strong>Mask Value -</strong> Allows you to specify a threshold value where only data greater than, less than, greater than or equal to, less than or equal to, or equal to values will display. After defining the initial Input Parameters, a Field Selector window will appear where you can specify <em>inputFieldForMask</em> (the field to be masked) as well as <em>displayFieldToBeMasked</em> (a second field that will be multiplied by the result of the mask of the <em>inputFieldForMask</em>. This field can be either the same field that you apply the mask to, or a different field).
+<table id="imageryformulas" cellpadding="0" cellspacing="0" border="1">
+  <tr>
+    <td colspan="1"><strong>Input Parameter</strong></td>
+   <td width="630"><strong>Definition
+   </strong></tr>
+   <tr>
+    <td width="120" colspan="1" rowspan="1" valign="top"><p><em>comparison</em></p></td>
+    <td width="510" colspan="2" rowspan="1" valign="top" nowrap><p>The mathematical operator applied to the&nbsp;<em>cutoff</em> value to determine which data values are displayed.</p></td>
+  </tr>
+  <tr>
+    <td width="120" colspan="1" rowspan="1" valign="top"><p><em>cutoff </em></p></td>
+    <td width="510" colspan="2" rowspan="1" valign="top" nowrap><p>The numerical boundary that will be applied to the<em> comparison</em> value.</p></td>
+  </tr>
+  <tr>
+    <td width="120" colspan="1" rowspan="1" valign="top"><p><em>useNaN</em></p></td>
+    <td width="510" colspan="2" rowspan="1" valign="top" nowrap><p>Default value = 1. When 0, values outside data will be 0, when 1, values outside data will be unprobeable.</p></td>
+  </tr>
+</table>
+</li>
+<li class="propertylistitem"><strong>Mask Values Within Range -</strong> Allows you to specify a numerical range where&nbsp;data values will display. After defining the initial Input Parameters, a Field Selector window will appear where you can specify <em>inputFieldForMask</em> (the field to be masked) as well as <em>displayFieldToBeMasked</em> (a second field that will be multiplied by the result of the mask of the <em>inputFieldForMask</em>. This field can be either the same field that you apply the mask to, or a different field).
+<table id="imageryformulas" cellpadding="0" cellspacing="0" border="1">
+  <tr>
+    <td colspan="1"><strong>Input Parameter</strong></td>
+   <td width="630"><strong>Definition
+   </strong></tr>
+   <tr>
+    <td width="120" colspan="1" rowspan="1" valign="top"><p><em>minValue</em></p></td>
+    <td width="510" colspan="2" rowspan="1" valign="top" nowrap><p>The minimum data value that will be displayed.</p></td>
+  </tr>
+  <tr>
+    <td width="120" colspan="1" rowspan="1" valign="top"><p><em>maxValue</em></p></td>
+    <td width="510" colspan="2" rowspan="1" valign="top" nowrap><p>The maximum data value that will be displayed.</p></td>
+  </tr>
+  <tr>
+    <td width="120" colspan="1" rowspan="1" valign="top"><p><em>useNan</em></p></td>
+    <td width="510" colspan="2" rowspan="1" valign="top" nowrap><p>Default value = 0. When 0, values outside data will be 0, when 1, values outside data will be unprobeable.</p></td>
+  </tr>
+</table>
+</li>
+<li class="propertylistitem"><strong>Scale images to brightness ranges -</strong> Displays your selected parameter in the Main Display window. Instead of using the color bar range that would be customary for your selected parameter, the standard range for brightness values will be used (i.e. 0-255).</li>
+<li class="propertylistitem"><strong>Three Color (RGB) Image -</strong> Combines three images as a RGB image when the 3 Color (RGB) Image display type is selected. When you select Create Display, a Field Selector window will open. The fields in this window are red, green, and blue. Once you click OK, an RGB image will be created in the Main Display window. Below is the <strong>Layer Controls</strong> tab for the 3 Color (RGB) Image display type.
+<div class="images"><img src="images/formula/RGBControls.gif" alt="Image 1: Three Color (RGB) Image" width="452" height="195"><br> 
+<span class="caption">Image 1: Three Color (RGB) Image</span></div>
+<ul class="propertylist">
+<li class="propertylistitem"><strong>Color Table -</strong> Shows the active color table and the associated high and low data values   in the units of the display. As   the mouse        pointer is moved   over the color bar, the value at a particular   color is        shown.   Right-click on the color bar or click on the button that   displays the   name of the Color Table to make modifications to the color   bar. This   allows you to open the <a href="http://www.ssec.wisc.edu/mcidas/doc/mcv_guide/working/tools/ColorTableEditor.html">Color          Table Editor</a>, change the range, select other color tables,   etc.</li>
+<li class="propertylistitem"><strong>Vertical Position -</strong> Changes the vertical position of the image with respect to other variables being displayed in the Main Display window. You can change this with the slider, or by entering a value into the field and pressing Enter.</li>
+<li class="propertylistitem"><strong>Transparency -</strong> Increases or decreases the transparency of the image.</li>
+</ul>
+</li>
+<li class="propertylistitem"><strong>Three Color (RGB) Image (Auto-scale) -</strong> Combines three images as a RGB image when the RGB Composite display type is selected. When you select Create Display, a Field Selector window will open. The fields in this window are red, green, and blue. Once you click OK, an RGB image will be created in the Main Display window. After the display is created, you have the ability to change the ranges for the red, green, and blue values, as well as the gamma values. Below is the <strong>Layer Controls</strong> tab for the RGB Composite display type.
+<div class="images"><img src="images/formula/RGBCompositeControls.gif" width="577" height="247" alt="Image 2: RGB Composite Controls"><br> 
+<span class="caption">Image 2: RGB Composite Controls</span></div>
+<ul class="propertylist">
+<li class="propertylistitem"><strong>Red range -</strong> Sets the minimum and maximum values for the red range, as well as the gamma value.</li>
+<li class="propertylistitem"><strong>Green range -</strong> Sets the minimum and maximum values for the green range, as well as the gamma value.</li>
+<li class="propertylistitem"><strong>Blue range -</strong> Sets the minimum and maximum values for the blue range, as well as the gamma value.</li>
+<li class="propertylistitem"><strong>Gamma - </strong>Sets a gamma value that is applied to all three colors. To apply one gamma value to all RGB gammas, enter a value into this field and press Enter or click <img src="images/formula/Apply.gif" width="65" height="26" alt="Apply button"align='absmiddle'>. A gamma value less than 1 will lead to the display being weighted toward higher (brighter) output values. A gamma value greater than 1 will lead to darker output.</li>
+<li class="propertylistitem"><strong><img src="images/formula/reset.gif" width="67" height="26" alt="Reset button"align='absmiddle'> -</strong> Resets the minimum and maximum range as well as gamma values for the color to their defaults.</li>
+<li class="propertylistitem"><strong> <img src="images/formula/Apply.gif" width="65" height="26" alt="Apply button"align='absmiddle'> -</strong> Applies any changes that have been made to any of the fields of the individual R, G, and B components to the image in the Main Display window. This button does not affect the bottom <strong>Gamma</strong> value. Alternatively, after changing a value in each field, you may press Enter to apply your change to the image.</li>
+<li class="propertylistitem"><img src="images/formula/ApplyAllGamma.gif" width="179" height="26" alt="Apply to All Gamma Fields button"align='absmiddle'><strong> -</strong> Applies a Common Gamma value to all red, green, and blue gamma fields.</li>
+</ul>
+</li>
+</ul>
+<!-- InstanceEndEditable -->
+<div class="BottomTitleNav">
+  <hr align="center">
+  <p class="style2" style="text-align:left; "> [<!-- InstanceBeginEditable name="GoToPrevious2" --><a href="ExportFormulas.html">Go
+        to Previous</a><!-- InstanceEndEditable -->] <span style="padding-left: 15px; "> [<!-- InstanceBeginEditable name="GoToNext2" --><a href="Jython.html">Go
+        to Next</a><!-- InstanceEndEditable -->] </span></p>
+</div>
+</body>
+<!-- InstanceEnd -->
+</html>

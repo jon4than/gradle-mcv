@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<!-- $Id$ -->
+<jnlp spec="1.0+" codebase="http://www.ssec.wisc.edu/mcidas/software/v/nightly/webstart/"> 
+   <information> 
+      <title>IDV base files</title> 
+      <vendor>Unidata</vendor> 
+      <offline-allowed/>
+   </information> 
+   <resources> 
+        <jar href="auxdata.jar"/>
+        <jar href="external.jar"/>
+        <jar href="jython.jar"/>
+        <jar href="local-visad.jar"/>
+        <jar href="visad.jar"/>
+        <jar href="ncIdv.jar"/>
+   </resources> 
+   <component-desc>
+   </component-desc> 
+   <security>
+       <all-permissions/>
+   </security>
+</jnlp> 

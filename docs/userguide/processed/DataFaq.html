@@ -1,0 +1,382 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- InstanceBegin template="/Templates/mcv_guide.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Data FAQ</title>
+<!-- InstanceEndEditable --><!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+<link rel="stylesheet" href="/mcidas/doc/mcv_guide/mcidasv.css" charset="ISO-8859-1" type="text/css">
+<!-- InstanceBeginEditable name="CurrentFile" -->
+<script language="javascript" type="text/javascript">
+function setParentPage() { if (parent.setPage) parent.setPage('DataFaq.html',true); }
+</script>
+<!-- InstanceEndEditable -->
+<style type="text/css">
+<!--
+.style1 {font-size: large;}
+.style2 {font-size: small;}
+-->
+</style>
+</head>
+<body onLoad="setParentPage();">
+<div class="TopTitleNav">
+  <p class="style2" style="text-align:left; "> [<!-- InstanceBeginEditable name="GoToPrevious" --><a href="UsingMcVFaq.html">Go
+        to Previous</a><!-- InstanceEndEditable -->] <span style="padding-left: 15px; "> [<!-- InstanceBeginEditable name="GoToNext" --><a href="VideoCardsFaq.html">Go
+        to Next</a><!-- InstanceEndEditable -->] </span> </p>
+  <hr align="center">
+</div>
+<!-- InstanceBeginEditable name="MainContent" -->
+<div class="pagetitle"><a name="faq1_cat4_" id="faq1_cat4_"></a>Data FAQ</div>
+    <!--<div class="faq-category-title"><a name="faq1_cat2_"></a>Downloading and
+      Starting with Web Start</div>
+    <div class="faq-category"><a name="download"></a>
+      <div class="faq-question">
+        <h4>Q. I couldn't download McIDAS-V. Is the server down?</h4>
+      </div>
+      </a>
+      <div class="faq-answer"><b>A.</b> Usually an inability to download McIDAS-V
+        and other Unidata software is due to a failure by your system to correctly
+        identify itself to our server.
+        <p> Both our server and the system trying to download Unidata software
+          have a &quot;name&quot; (domain name or host name or server name) and an IP address.
+          For example the address 128.117.140.62 is the same as the server with
+          name unidata.ucar.edu.</p>
+        <p> As a security measure many servers only reply to requests from systems
+          whose address can be matched to a name using &quot;reverse lookup&quot; - turning
+          the numbers into a name.</p>
+        <p> &quot;Forward lookups&quot; find the IP address of any given host name. The
+          reverse action is resolving IP addresses into host names. If our server
+          cannot resolve the requesting system IP address into a name, no software
+          will be sent to the requesting IP address. If you are having problems
+          downloading McIDAS-V from our server, check with your local system
+          administrator to make sure that your machine has reverse lookup enabled.
+          If not, download McIDAS-V from a system that does.</p> 
+      </div>
+      <p></p>
+      
+      <p></p><a name="certificate"></a>
+      <div class="faq-question">
+        <h4>Q. When I first run McIDAS-V through Web Start, it asks me to accept
+          a certificate? What should I do?</h4>
+      </div>
+      </a>
+      <div class="faq-answer"><b>A.</b> When you first download McIDAS-V through
+        Web Start, you will see a message like:
+        <pre>
+This <b>application</b> is requesting unrestricted access to your local 
+machine and network.
+
+Do you want to install and run: <b>Integrated Data Viewer </b>
+Signed and distributed by: <b>University Corporation for Atmospheric Research </b>
+Publisher authenticity verified by: <b>Thawte Premium Server CA</b>
+
+Caution: <b>University Corporation for Atmospheric Research</b> asserts 
+that this content is safe. You should only install and run this application 
+if you trust <b>University Corporation for Atmospheric Research</b> to make 
+this assertion.
+</pre>
+        If you trust Unidata to make safe software, click the <code class="command">Start</code> button </div>
+      <p></p>
+      
+      <p></p><a name="updates"></a>
+      <div class="faq-question">
+        <h4>Q. How can I get updates through Web Start?</h4>
+      </div>
+      </a>
+      <div class="faq-answer"><b>A.</b> When starting McIDAS-V using Web Start,
+        the latest version of all McIDAS-V code is found at the UW-SSEC server,
+        and it is automatically downloaded and installed if it is newer than
+        the version you have on your system. </div>
+      <p></p>
+      
+      <p></p><a name="nodisk"></a>
+      <div class="faq-question">
+        <h4>Q. What is &quot;there is no disk in drive A&quot; message in Web
+          Start?</h4>
+      </div>
+      </a>
+      <div class="faq-answer"><b>A.</b> Sometimes starting a program on a Windows
+        system with Web Start will produce a dialog box that says &quot;There is no
+        disk in drive A.&quot; Normally clicking the continue button will cause the
+        program to start properly. </div>
+      <p></p>
+      
+      <p></p><a name="wsmanager"></a>
+      <div class="faq-question">
+        <h4>Q. How do I use the Web Start Applications Manager?</h4>
+      </div>
+      </a>
+      <div class="faq-answer"><b>A.</b> If you run McIDAS-V from Web Start, for
+        more control of McIDAS-V, use the Web Start Application Manager. You
+        can launch it by clicking <a href="http://www.unidata.ucar.edu/software/idv/webstart/IDV/player.jnlp"> here</a>.
+        Alternatively, go to http://java.sun.com/products/javawebstart/demos.html,
+        and find the Web Start &quot;Application Manager&quot; on that page. Start the &quot;Application
+        Manager&quot; by clicking on the &quot;Launch&quot; button.
+        <p> In the Application Manager you will see McIDAS-V, if you do this
+          after you have installed McIDAS-V with Web Start.</p>
+        <p> You can use the Application Manager to start McIDAS-V without going
+          to the Unidata web page Web Start link, and to remove an old McIDAS-V
+          to force a complete new McIDAS-V download next time you start McIDAS-V
+          with the Unidata web page http://www.unidata.ucar.edu/projects/metapps/webstart/IDV/
+          .</p>
+        <p> If your Web Start McIDAS-V installation seems broken, remove it with
+          the Application Manager and reload from the McIDAS-V Web Start Link.
+          When you run the Application Manager it will have a panel showing &quot;McIDAS-V&quot; 
+          with an icon. Click to select and it will highlight; it
+          may already be selected. Use the <code class="menu">Application-&gt;Remove
+          Application</code> menu. The McIDAS-V item will go away. Reload McIDAS-V
+          from the Unidata web site.</p>
+        <p> You can see what Java version McIDAS-V is using. Use the Application
+          Manager's <code class="menu">File-&gt;Preferences-&gt;Java</code> menu
+          and look at &quot;Product version&quot;. </p>
+      </div>
+      <p></p>
+      
+      <p></p><a name="wsconsole"></a>
+      <div class="faq-question">
+        <h4>Q. How can I show the Java console when running with Web Start?</h4>
+      </div>
+      </a>
+      <div class="faq-answer"><b>A.</b> When you start McIDAS-V using Web Start,
+        you don't have a console window opened by default. You can enable the
+        Java console through the Web Start Applications Manager. Bring up the
+        Web Start Manager (Java Application Cache Viewer) as described <a href="#wsmanager">above</a>.
+        Use the <code class="menu">Edit-&gt;Preferences</code> menu to bring
+        up the Preferences dialog. Click on the Advanced Tab and expand the Java
+        Console item in the tree. Select the &quot;Show Console&quot; option and then click
+        the OK button. The next time you start McIDAS-V with Web Start, you will
+        get a console that will log messages. Messages are also logged to the
+        McIDAS-V console. See the item <a href="#console">below</a> for information
+        on using this feature. </div>
+      <p></p>
+      
+      <p></p><a name="ownws"></a>
+      <div class="faq-question">
+        <h4>Q. Can I serve up JNLP bundles from my own web server?</h4>
+      </div>
+      </a>
+      <div class="faq-answer"><b>A.</b> You can save a bundle as a JNLP file
+        by using a .jnlp extension in the <code class="menu">File-&gt;Save As...</code> menu
+        dialog. Once you have the file, you can place it on your web server and
+        create a web page that points to it. Your web server must identify this
+        as a JNLP file, so if it doesn't already support this, you'll need to
+        configure your Web server so that all files with the .jnlp file extension
+        are set to the application/x-java-jnlp-file MIME type. Each Web server
+        has a specific way in which to add MIME types. For example, for the Apache
+        Web server you must add the following line to the .mime.types configuration
+        file:
+        <pre>
+application/x-java-jnlp-file JNLP
+</pre>
+        Check the documentation for the specifics of your Web server. </div>
+      <p></p>
+      
+      <p> </p>
+    </div>-->
+    <div class="faq-category"><a name="fastrender" id="fastrender"></a>
+        <div class="faq-question">
+      <h4>Q. What is Fast Rendering and when should I use it?</h4>
+    </div>
+    <div class="faq-answer"><strong>A.</strong> By default, McIDAS-V will try
+      to adjust the data layer (images, contours, etc.) renderings to account
+      for projection seams. This is computationally intensive in some cases and
+      slows down the display of data. If you change your <a href="tools/preferences/GeneralPreferences.html">User
+      Preferences</a> setting
+        to <strong><a href="misc/PerformanceTuning.html#fastrender">Use fast rendering</a></strong>, McIDAS-V will not try to account
+        for the projection seams. You can turn on/off Fast Rendering for individual displays in their <a href="controls/PropertiesDialog.html#properties">Properties
+        dialogs</a>. </div>
+    <a name="pressure_to_height" id="pressure_to_height"></a>
+    <div class="faq-question">
+      <h4>Q. What is the difference between the Standard Atmosphere and Vis5D
+        pressure to height conversion?</h4>
+    </div>
+    <div class="faq-answer"><strong>A.</strong> McIDAS-V displays pressure surfaces
+      by converting the pressure to a height in some reference system. There
+      are two reference systems that come standard with McIDAS-V - the U.S. Standard
+      Atmosphere and Vis5D. The U.S. Standard Atmosphere only computes has conversions
+      for pressures up to about 80 km. The Vis5D coordinate system uses a logarithmic
+      conversion:
+      <pre>
+      P = 1012.5 * e^( H / -7.2 )        (^ denotes exponentiation)
+      H = -7.2 * Ln( P / 1012.5 )        (Ln denotes natural log)
+</pre>
+      so it can be used for heights above 80 km.</div>
+    <a name="ncdc" id="ncdc"></a>
+    <div class="faq-question">
+      <h4>Q. Why do I get an error when I try to load radar data that I downloaded
+        from NCDC?</h4>
+    </div>
+    <div class="faq-answer"><strong>A.</strong> There are few common problems
+      that can cause this:
+      <ol>
+        <li><strong>The files are in a compressed tar file</strong> - Typically,
+          when you download Level II data from NCDC, the files are in a compressed
+          TAR file which holds the individual volume scans. You need to extract
+          the volumes from the TAR file with utilities like tar, gunzip, WinZip
+          into a directory.</li>
+        <li><strong>You are using the Files chooser</strong> - You should load
+          the radar data using the <strong>Radar-&gt;Level II-&gt;Local</strong> file
+          chooser in the <strong>Data Sources</strong> tab of the Data Explorer,
+          not the <strong>General-&gt;Files</strong> chooser. In some cases,
+          the files do not have any location information in them. The Level II
+          data chooser allows you to associate a station location with the data
+          file, using the directory name as a first guess.</li>
+        <li><strong>You are trying to load Level III raster products</strong><strong></strong> -
+          McIDAS-V only handles the Level III data that is stored in radial format
+          (Base Reflectivity, Storm Relative Velocity, Base Velocity, 1 and 3
+          hour precipitation, Echo Tops).</li>
+      </ol>
+    </div>
+    <a name="gribtables" id="gribtables"></a>
+    <div class="faq-question">
+      <h4>Q. When I try to read in my GRIB data, why do I get an ucar.grib.NotSupportedException?</h4>
+    </div>
+    <div class="faq-answer"><strong>A.</strong> For McIDAS-V to read in GRIB
+      data, it needs access to lookup tables for decoding the information in
+      the data. McIDAS-V comes pre-configured with most of the commonly used
+      tables from NCEP, FNMOC, etc, but some GRIB data from regional centers
+      may use tables other than the defaults. If McIDAS-V does not have the necessary
+      table, you will get the NotSupportedException. You can add in new tables
+      by following the instructions in the User's Guide section on <a href="data/GribTables.html">Adding
+      in new GRIB tables</a>.</div>
+    <a name="resample" id="resample"></a>
+    <div class="faq-question">
+      <h4>Q. How are grids resampled in McIDAS-V?</h4>
+    </div>
+    <div class="faq-answer"><strong>A.</strong> McIDAS-V uses two methods for
+      resampling data - weighted average and nearest neighbor. These are the
+      default sampling modes for VisAD, which McIDAS-V is based on. For any grid,
+      the samples are organized in a topology, which may be triangles (Irregular2D),
+      squares (Gridded2D), tetrahedra (Irregular3D) or cubes (Gridded3D). For
+      target points the system finds which topology element contains the target.
+      For nearest neighbor, it gets the values at the vertex of that containing
+      topology element closest to the target point. For weighted average, it
+      computes a weighted average of all vertices of that containing topology
+      element, where the weights are bilinear in 2D and trilinear in 3D. (source:
+      Bill Hibbard, SSEC)</div>
+    <a name="nogridtime" id="nogridtime"></a>
+    <div class="faq-question">
+      <h4>Q. Why can't I create a time series from single time grid files?</h4>
+    </div>
+    <div class="faq-answer">
+      <p><strong>A.</strong> If you receive an error message similar to the following:</p>
+      <pre>
+      An error has occurred:
+      Creating display: Color-Shaded Plan View
+      org.python.core.PyException
+      
+      visad.UnitException: visad.UnitException: Set: units dimension 1 does
+        not match Domain dimension 2
+</pre>
+      <p>the files may not have a <span class="faq-answer">&quot;</span>time<span class="faq-answer">&quot;</span> dimension
+        defined in them. It is recommended that you use the NetCDF Markup Language
+        (NcML) to aggregate the files. See <a href="http://www.unidata.ucar.edu/software/netcdf/ncml/v2.2/Aggregation.html" target="_blank">http://www.unidata.ucar.edu/software/netcdf/ncml/v2.2/Aggregation.html</a> for
+        more information on aggregating files.</p>
+    </div>
+    <a name="aggregate" id="aggregate"></a>
+    <div class="faq-question">
+      <h4>Q. How do I create a time series from individual grid files with different time steps?</h4>
+    </div>
+    <div class="faq-answer">
+      <p><strong>A.</strong> If you have individual files of gridded data for multiple time&nbsp;steps that you want to display as a single layer to utilize the&nbsp;Time Animation Widget, there are two methods of doing this. First, in the <strong>Data Sources</strong> tab of the Data Explorer, navigate to the <strong>Gridded Data-&gt;Local</strong> or the <strong>General Files/Directories </strong>chooser. Select the <em>Aggregate Grids by Time </em><strong>Data Type</strong>, navigate to the directory where your files are stored, and use Shift+click to select the files you wish to include in your layer. In the <strong>Field Selector</strong>, you will see that all of the times you&nbsp;selected for the data are grouped together. You can select your display type, create the display, and all of the data times will be loaded in as one layer and you can animate through them.</p>
+      <p>Alternatively, you can add all of the files individually through the <strong>Gridded Data-&gt;Local</strong> or <strong>General-&gt;Files/Directories</strong> chooser (without the&nbsp;<em>Aggregate Grids by Time </em><strong>Data Type</strong>) and use the<em> Make a time sequence from single time grids/images</em> formula. This is a native formula of McIDAS-V that can be found under the <strong>Miscellaneous </strong>tree of formulas in the <strong>Field Selector</strong>. Using this formula, you can select all of the individual files,&nbsp;and McIDAS-V will add all of them to the Main Display window as a single layer you can animate through time.</p>
+    </div>
+    <a name="windbarb" id="windbarb"></a>
+    <div class="faq-question">
+      <h4>Q. <a class="faq-question-link" href="DataFaq.html#windbarb">What are the wind speed thresholds for different wind barbs?</a></h4>
+    </div>
+    <div class="faq-answer">
+      <p><strong>A.</strong> Below is a table that shows different wind speed thresholds when it comes to plotting wind barbs of gridded or point data.&nbsp; In this table, 'x' represents wind speed in knots.</p>
+      <table width="410" border="1">
+          <tr>
+              <th scope="col">Wind Barb</th>
+              <th scope="col">Knots</th>
+              <th scope="col">Wind Barb</th>
+              <th scope="col">Knots</th>
+          </tr>
+          <tr>
+              <th scope="col"><img src="images/WindBarbs/calm.gif" alt="Calm" width="28" height="23"></th>
+              <td>x&nbsp;= 0</td>
+              <th scope="col"><img src="images/WindBarbs/55kt.gif" width="42" height="18" alt="55kt"></th>
+              <td>52.6 &le; x &le; 57.5</td>
+          </tr>
+          <tr>
+              <th scope="col"><img src="images/WindBarbs/2kt.gif" width="49" height="20" alt="2kt"></th>
+              <td>0 &lt; x &le; 2.5</td>
+              <th scope="col"><img src="images/WindBarbs/60kt.gif" width="41" height="19" alt="60kt"></th>
+              <td>57.6 &le; x &le; 62.5</td>
+          </tr>
+          <tr>
+              <th scope="col"><img src="images/WindBarbs/5kt.gif" width="45" height="17" alt="5kt"></th>
+              <td>2.6 &le; x &le; 7.5</td>
+              <th scope="col"><img src="images/WindBarbs/65kt.gif" width="43" height="19" alt="65kt"></th>
+              <td>62.6 &le; x &le; 67.5</td>
+          </tr>
+          <tr>
+              <th scope="col"><img src="images/WindBarbs/10kt.gif" width="46" height="17" alt="10kt"></th>
+              <td>7.6 &le; x &le; 12.5</td>
+              <th scope="col"><img src="images/WindBarbs/70kt.gif" width="42" height="20" alt="70kt"></th>
+              <td>67.6 &le; x &le; 72.5</td>
+          </tr>
+          <tr>
+              <th scope="col"><img src="images/WindBarbs/15kt.gif" width="47" height="19" alt="15kt"></th>
+              <td>12.6 &le; x &le; 17.5</td>
+              <th scope="col"><img src="images/WindBarbs/75kt.gif" width="43" height="18" alt="75kt"></th>
+              <td>72.6 &le; x &le; 77.5</td>
+          </tr>
+          <tr>
+              <th scope="col"><img src="images/WindBarbs/20kt.gif" width="46" height="21" alt="20kt"></th>
+              <td>17.6 &le; x &le; 22.5</td>
+              <th scope="col"><img src="images/WindBarbs/80kt.gif" width="42" height="18" alt="80kt"></th>
+              <td>77.6 &le; x &le; 82.5</td>
+          </tr>
+          <tr>
+              <th scope="col"><img src="images/WindBarbs/25kt.gif" width="46" height="19" alt="25kt"></th>
+              <td>22.6 &le; x &le; 27.5</td>
+              <th scope="col"><img src="images/WindBarbs/85kt.gif" width="41" height="19" alt="85kt"></th>
+              <td>82.6 &le; x &le; 87.5</td>
+          </tr>
+          <tr>
+              <th scope="col"><img src="images/WindBarbs/30kt.gif" width="45" height="17" alt="30kt"></th>
+              <td>27.6 &le; x &le; 32.5</td>
+              <th scope="col"><img src="images/WindBarbs/90kt.gif" width="40" height="18" alt="90kt"></th>
+              <td>87.6 &le; x &le; 92.5</td>
+          </tr>
+          <tr>
+              <th scope="col"><img src="images/WindBarbs/35kt.gif" width="48" height="21" alt="35kt"></th>
+              <td>32.6 &le; x &le; 37.5</td>
+              <th scope="col"><img src="images/WindBarbs/95kt.gif" width="45" height="19" alt="95kt"></th>
+              <td>92.6 &le; x &le; 97.5</td>
+          </tr>
+          <tr>
+              <th scope="col"><img src="images/WindBarbs/40kt.gif" width="48" height="18" alt="40kt"></th>
+              <td>37.6 &le; x &le; 42.5</td>
+              <th scope="col"><img src="images/WindBarbs/100.gif" width="41" height="18" alt="100kt"></th>
+              <td>97.6 &le; x &le; 102.5</td>
+          </tr>
+          <tr>
+              <th scope="col"><img src="images/WindBarbs/45kt.gif" width="47" height="19" alt="45kt"></th>
+              <td>42.6 &le; x &le; 47.5</td>
+              <th scope="col"><img src="images/WindBarbs/105.gif" width="43" height="17" alt="105kt"></th>
+              <td>102.6 &le; x &le; 107.5</td>
+          </tr>
+          <tr>
+              <th scope="col"><img src="images/WindBarbs/50kt.gif" width="43" height="19" alt="50kt"></th>
+              <td>47.6 &le; x &le; 52.5</td>
+              <th scope="col"><img src="images/WindBarbs/110kt.gif" width="41" height="17" alt="110kt"></th>
+              <td>107.6 &le; x &le; 112.5</td>
+          </tr>
+      </table>
+    </div>
+  </div>
+<!-- InstanceEndEditable -->
+<div class="BottomTitleNav">
+  <hr align="center">
+  <p class="style2" style="text-align:left; "> [<!-- InstanceBeginEditable name="GoToPrevious2" --><a href="UsingMcVFaq.html">Go
+        to Previous</a><!-- InstanceEndEditable -->] <span style="padding-left: 15px; "> [<!-- InstanceBeginEditable name="GoToNext2" --><a href="VideoCardsFaq.html">Go
+        to Next</a><!-- InstanceEndEditable -->] </span></p>
+</div>
+</body>
+<!-- InstanceEnd -->
+</html>

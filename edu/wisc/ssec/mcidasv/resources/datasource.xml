@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<datasources>
+
+  <datasource
+     id="ADDE.IMAGE.V"
+     factory="edu.wisc.ssec.mcidasv.data.adde.AddeImageParameterDataSource"
+     patterns="adde://.*/imagedata(/|\?).*$"
+     doesmultiples="true"
+     label="Images from an ADDE server (Parameter)"/>
+  <datasource
+     id="ADDE.POINT.V"
+     factory="edu.wisc.ssec.mcidasv.data.adde.AddePointDataSource"
+     patterns="adde://.*/pointdata/.*$,.*\.apt"
+     fileselection="true"
+     label="Point data from an ADDE server"/>
+  <datasource
+     id="TLE"
+     factory="edu.wisc.ssec.mcidasv.data.PolarOrbitTrackDataSource"
+     patterns="adde://.*/textdata/.*$,.*\.apt"
+     fileselection="true"
+     label="Satellite Orbit Tracks from TLE"/>     
+  <datasource
+     id="HRIT"
+     factory="edu.wisc.ssec.mcidasv.data.hrit.HRITDataSource"
+     fileselection="true"
+     doesmultiples="true"
+     label="HRIT data source"/>     
+     
+  <datasource
+     id="SuomiNPP"
+     factory="edu.wisc.ssec.mcidasv.data.hydra.SuomiNPPDataSource"
+     fileselection="true"
+     doesmultiples="true"
+     label="Suomi NPP data source"/>
+     
+  <datasource
+     id="HYDRA"
+     factory="edu.wisc.ssec.mcidasv.data.hydra.MultiDimensionDataSource"
+     patterns="^.*(CAL_LID_L1.*\.hdf)$,^.*(CAL_LID_L2.*\.hdf)$,^.*(MYD06.*\.hdf)$,^.*(MOD06.*\.hdf)$,^.*(MYD04.*\.hdf)$,^.*(MOD04.*\.hdf)$"
+     fileselection="true"
+     doesmultiples="true"
+     label="HYDRA data source"/>
+  <datasource
+     id="MultiSpectral"
+     factory="edu.wisc.ssec.mcidasv.data.hydra.MultiSpectralDataSource"
+     fileselection="true"
+     doesmultiples="true"
+     label="HYDRA Multi/Hyper-Spectral data source"/>
+  <datasource
+     id="MCIDASX"
+     factory="edu.wisc.ssec.mcidasv.data.McIdasXDataSource"
+     doesmultiples="true"
+     label="McIDAS-X data source"/>
+     
+  <datasource
+     id="FILE.FLAT"
+     factory="edu.wisc.ssec.mcidasv.data.FlatFileDataSource"
+     fileselection="true"
+     label="Image Flat files"></datasource>
+ 
+</datasources>

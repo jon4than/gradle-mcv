@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<choosers>
+
+	<!--                       -->
+	<!--     IMAGERY           -->
+	<!--                       -->
+
+	<panel layout="border" style="toplabel" category="Satellite"
+		categorycomponent="true">
+		<html
+			text="
+			&lt;b&gt;Display Satellite Imagery from local or remote sources&lt;/b&gt;
+			&lt;br&gt;
+			&lt;ul&gt;
+			&lt;li&gt;
+			Select &lt;b&gt;Imagery&lt;/b&gt; to access data via ADDE
+			&lt;li&gt;
+			Select &lt;b&gt;HYDRA&lt;/b&gt; to access HYDRA Multispectral data via a file browser
+			&lt;/ul&gt;
+                        Select &lt;b&gt;TLE&lt;/b&gt; to access TLE text
+>                       &lt;/ul&gt;
+		" />
+	</panel>
+
+	<panel title="Imagery" category="Satellite" layout="border"
+		tabtooltip="For accessing satellite imagery">
+		<chooser id="chooser.imageparameter" title="Imagery"
+			menutitle="Satellite Imagery" helppath="idv.data.choosers.imagechooser"
+			showdetails="true" includeNavComp="true"
+			class="edu.wisc.ssec.mcidasv.chooser.adde.AddeImageParameterChooser" />
+	</panel>
+
+	<panel title="HYDRA" category="Satellite" layout="border"
+		tabtooltip="For accessing HYDRA data">
+		<chooser id="chooser.hydra" title="HYDRA" menutitle="Local HYDRA data"
+			showinmenu="true" helppath="idv.data.choosers.hydrachooser"
+			showpolling="false" filepattern=".*" selectdatasourceid="true"
+			datasourceid="MultiSpectral" class="edu.wisc.ssec.mcidasv.chooser.FileChooser" />
+	</panel>
+
+
+	<!--                       -->
+	<!--     RADAR             -->
+	<!--                       -->
+	<panel layout="border" style="toplabel" category="Radar"
+		categorycomponent="true">
+		<html
+			text="
+			&lt;b&gt;Display Radar data from stations across the United States&lt;/b&gt;
+			&lt;br&gt;
+			&lt;ul&gt;
+			&lt;li&gt;
+			&lt;b&gt;Level II&lt;/b&gt; data can be local or remote
+			&lt;li&gt;
+			Select &lt;b&gt;Level III&lt;/b&gt; to access data via ADDE
+			&lt;/ul&gt;
+		" />
+	</panel>
+
+	<panel layout="border" category="Radar&gt;Level II"
+		categorycomponent="true">
+		<html
+			text="
+			&lt;b&gt;Display Level II Radar data from stations across the United States&lt;/b&gt;
+			&lt;br&gt;
+			&lt;ul&gt;
+			&lt;li&gt;
+			Select &lt;b&gt;Local&lt;/b&gt; to access local data via a file browser
+			&lt;li&gt;
+			Select &lt;b&gt;Remote&lt;/b&gt; to access remote data via a THREDDS catalog
+			&lt;/ul&gt;
+		" />
+	</panel>
+
+	<panel title="Local" layout="border" category="Radar&gt;Level II"
+		tabtooltip="For accessing local level II radar data">
+		<chooser id="chooser.radar.level2" title="Local"
+			menutitle="Level II Radar-Local" helppath="idv.data.choosers.level2chooser"
+			xxx.idv.chooser.projection.bounds="50,-100,50,20"
+			xxx.idv.chooser.maps="semi-colon delimited list of maps, e.g., /auxdata/maps/OUTLUSAM"
+			class="edu.wisc.ssec.mcidasv.chooser.Level2RadarChooser" />
+	</panel>
+
+	<panel title="Remote" layout="border" category="Radar&gt;Level II"
+		tabtooltip="For accessing remote level II radar data">
+		<chooser id="chooser.tdsradar" title="Remote" menutitle="Level II Radar-Remote"
+			helppath="idv.data.choosers.level2chooser" class="edu.wisc.ssec.mcidasv.chooser.TDSRadarChooser" />
+	</panel>
+
+<!--
+	<panel title="Remote (IDV)" layout="border" category="Radar&gt;Level II"
+		tabtooltip="For accessing remote level II radar data">
+		<chooser id="chooser.tdsradaridv" title="Remote (IDV)" menutitle="Level II Radar-Remote"
+			helppath="idv.data.choosers.level2chooser" class="ucar.unidata.idv.chooser.TDSRadarChooser" />
+	</panel>
+-->
+
+	<panel title="Level III" category="Radar" layout="border"
+		tabtooltip="For accessing level III radar data">
+		<chooser id="chooser.radar.level3" title="Level III"
+			menutitle="Level III Radar" helppath="idv.data.choosers.radarchooser"
+			showdetails="true" class="edu.wisc.ssec.mcidasv.chooser.adde.AddeRadarChooser" />
+	</panel>
+
+
+
+
+
+
+
+
+
+	<!--                       -->
+	<!--     OBSERVATIONS      -->
+	<!--                       -->
+
+	<panel layout="border" category="Point Observations"
+		categorycomponent="true">
+		<html
+			text="
+			&lt;b&gt;Display Surface, Upper Air, and Sounding data from stations around the world&lt;/b&gt;
+			&lt;br&gt;
+			&lt;ul&gt;
+			&lt;li&gt;
+			Select &lt;b&gt;Plot/Contour&lt;/b&gt; to access data via ADDE
+			&lt;li&gt;
+			&lt;b&gt;Soundings&lt;/b&gt; data can be local or remote
+			&lt;/ul&gt;
+		" />
+	</panel>
+
+	<panel title="Plot/Contour" category="Point Observations" layout="border"
+		tabtooltip="For accessing ADDE point data">
+		<chooser id="chooser.point" title="Surface" menutitle="Surface Observations"
+			helppath="idv.data.choosers.pointchooser" showdetails="true"
+			class="edu.wisc.ssec.mcidasv.chooser.adde.AddePointDataChooser" />
+	</panel>
+
+	<panel layout="border" category="Point Observations&gt;Soundings"
+		categorycomponent="true">
+		<html
+			text="
+			&lt;b&gt;Display Sounding data from stations around the world&lt;/b&gt;
+			&lt;br&gt;
+			&lt;ul&gt;
+			&lt;li&gt;
+			Select &lt;b&gt;Local&lt;/b&gt; to access data via a file browser
+			&lt;li&gt;
+			Select &lt;b&gt;Remote&lt;/b&gt; to access data via ADDE
+			&lt;/ul&gt;
+		" />
+	</panel>
+
+	<!-- IDV RAOB CHOOSERS -->
+	<!--
+	<panel title="Local" category="Point Observations&gt;Soundings"
+		layout="border" tabtooltip="For accessing RAOB data">
+		<chooser
+			id="chooser.raob.file_old"
+			title="Soundings: Local"
+			menutitle="Sounding Data-Local"
+			helppath="idv.data.choosers.raobchooser"
+			class="ucar.unidata.idv.chooser.RaobChooser"
+			showserver="false"/>
+	</panel>
+	<panel title="Remote" category="Point Observations&gt;Soundings"
+		layout="border" tabtooltip="For accessing RAOB data">
+		<chooser
+			id="chooser.raob.remote_old"
+			title="Soundings: Remote"
+			menutitle="Sounding Data-Remote"
+			helppath="idv.data.choosers.raobchooser"
+			class="ucar.unidata.idv.chooser.RaobChooser"
+			showserver="true"/>
+	</panel>
+	-->
+	
+	<!-- MCIDASV RAOB CHOOSERS -->
+	<panel title="Local" category="Point Observations&gt;Soundings"
+		layout="border" tabtooltip="For accessing local RAOB soundings">
+		<chooser id="chooser.raob.file" title="Local" menutitle="Sounding Data-Local"
+			helppath="idv.data.choosers.raobchooser" class="edu.wisc.ssec.mcidasv.chooser.RaobChooser" />
+	</panel>
+	<panel title="Remote" category="Point Observations&gt;Soundings"
+		layout="border" tabtooltip="For accessing ADDE RAOB soundings">
+		<chooser id="chooser.raob.remote" title="Remote" menutitle="Sounding Data-Remote"
+			helppath="idv.data.choosers.raobchooser" class="edu.wisc.ssec.mcidasv.chooser.adde.AddeRaobChooser" />
+	</panel>
+
+	<!--                  -->
+	<!--    GRIDDED       -->
+	<!--                  -->
+
+	<panel layout="border" category="Gridded Data" categorycomponent="true">
+		<html
+			text="
+			&lt;b&gt;Display Gridded Data from various sources&lt;/b&gt;
+			&lt;br&gt;
+			&lt;ul&gt;
+			&lt;li&gt;
+			Select &lt;b&gt;Local&lt;/b&gt; to access local GRIB, GRIB2, and NetCDF files
+			&lt;li&gt;
+			Select &lt;b&gt;Remote&lt;/b&gt; to access remote data via a THREDDS catalog
+			&lt;/ul&gt;
+		" />
+	</panel>
+
+	<panel title="Local" category="Gridded Data" layout="border"
+		tabTooltip="For accessing local gridded data">
+		<chooser id="chooser.gridded.local" title="Local Gridded Data" menutitle="From files or a directory"
+			showinmenu="true" helppath="idv.data.choosers.gridchooser"
+			filepattern=".*" filecount="all"
+			class="edu.wisc.ssec.mcidasv.chooser.PollingFileChooser" />
+	</panel>
+
+	<panel title="Remote" category="Gridded Data" layout="border"
+		tabTooltip="For accessing remote gridded data">
+		<chooser id="chooser.gridded.remote" title="Remote Gridded Data" menutitle="From a Catalog"
+			showinmenu="true" helppath="idv.data.choosers.gridchooser"
+			class="edu.wisc.ssec.mcidasv.chooser.TDSGridChooser" />
+	</panel>
+
+
+
+
+	<!--                       -->
+	<!--     FRONTS            -->
+	<!--                       -->
+	<panel title="Front Positions" layout="border"
+		tabtooltip="For accessing ADDE front products" mnemonic="O">
+		<chooser id="chooser.fronts" title="Fronts" menutitle="Fronts"
+			helppath="idv.data.choosers.frontchooser" class="edu.wisc.ssec.mcidasv.chooser.adde.AddeFrontChooser" />
+	</panel>
+
+
+
+
+
+
+
+
+
+	<!--                  -->
+	<!--    GENERAL       -->
+	<!--                  -->
+
+	<panel layout="border" category="General" categorycomponent="true">
+		<html
+			text="
+			&lt;b&gt;Display data from various sources&lt;/b&gt;
+			&lt;br&gt;
+			&lt;ul&gt;
+			&lt;li&gt;
+			Select &lt;b&gt;Files/Directories&lt;/b&gt; to access files and directories via a file system browser
+			&lt;br&gt;
+			Allows polling for directory updates
+			&lt;li&gt;
+			Select &lt;b&gt;Catalogs&lt;/b&gt; to display many types of data from available catalogs
+			&lt;br&gt;
+			eg. model data, road and hydrography data from Tiger shapefiles, NWS warnings from shapefiles, maps from available web map servers
+			&lt;li&gt;
+			Select &lt;b&gt;URLs&lt;/b&gt; to access data via a URL
+			&lt;li&gt;
+			&lt;b&gt;Flat files&lt;/b&gt; will load McIDAS AXFORM output, many ENVI formats and plain images (.png, .jpg, .gif)
+			&lt;/ul&gt;
+		" />
+	</panel>
+
+	<panel title="Files/Directories" category="General" layout="border"
+		tabTooltip="For accessing local files and directories" mnemonic="F">
+		<chooser id="chooser.filedir" title="Files/Directories" menutitle="From files or a directory"
+			showinmenu="true" helppath="idv.data.choosers.filechooser"
+			filepattern=".*" filecount="all"
+			class="edu.wisc.ssec.mcidasv.chooser.PollingFileChooser" />
+	</panel>
+
+	<panel title="Catalogs" category="General" layout="border"
+		tabTooltip="For accessing remote catalog data" mnemonic="C">
+		<chooser id="chooser.xml" title="Catalogs" menutitle="From a Catalog"
+			showinmenu="true" helppath="idv.data.choosers.catalogchooser" class="edu.wisc.ssec.mcidasv.chooser.XmlChooser" />
+	</panel>
+	
+	<panel title="URLs" category="General" layout="border"
+		tabTooltip="For accessing URLs" mnemonic="U">
+		<chooser id="chooser.url" title="URLs" menutitle="From a URL"
+			showinmenu="true" helppath="idv.data.choosers.urlchooser" class="edu.wisc.ssec.mcidasv.chooser.UrlChooser" />
+	</panel>
+
+	<panel title="Flat files" category="General" layout="border"
+		tabtooltip="For accessing data in flat binary or ASCII files">
+		<chooser id="chooser.flatfile" title="Flat files" menutitle="Flat files"
+			showinmenu="true" helppath="idv.data.choosers.flatfilechooser"
+			class="edu.wisc.ssec.mcidasv.chooser.FlatFileChooser" />
+	</panel>
+
+
+
+
+	<!--                  -->
+	<!--    McIDAS-X      -->
+	<!--                  -->
+
+<!--
+	<panel title="McIDAS-X Bridge" layout="border"
+		tabTooltip="For importing McIDAS-X frames" mnemonic="C">
+		<chooser id="chooser.mcidasx" title="McIDAS-X" menutitle="From McIDAS-X"
+			showinmenu="true" helppath="idv.data.choosers.bridgechooser"
+			class="edu.wisc.ssec.mcidasv.chooser.McIdasBridgeChooser"
+			showpolling="false" />
+	</panel>
+-->
+
+
+
+	<!--                  -->
+	<!--     Legacy       -->
+	<!--                  -->
+	
+<!--
+	<panel layout="border" category="Legacy Choosers" categorycomponent="true">
+		<html
+			text="
+			&lt;b&gt;These choosers are for included for backwards compatibility testing purposes&lt;/b&gt;
+			&lt;br&gt;
+			&lt;br&gt;
+			Please see the &lt;a href=&quot;http://www.ssec.wisc.edu/mcidas/forums&quot;&gt;McIDAS-V Forums&lt;/a&gt; for more information			
+		" />
+	</panel>
+
+	<panel title="Imagery" category="Legacy Choosers" layout="border"
+		tabtooltip="For accessing satellite imagery">
+		<chooser id="chooser.image" title="Imagery" menutitle="Satellite Imagery"
+			helppath="idv.data.choosers.imagechooser" showdetails="true"
+			includeNavComp="true" class="edu.wisc.ssec.mcidasv.chooser.adde.AddeImageChooser" />
+	</panel>
+-->
+
+
+
+
+
+	<!--                         -->
+	<!--    Under Development    -->
+	<!--                         -->
+	
+	
+	<panel layout="border" category="Under Development" categorycomponent="true">
+		<html
+			text="
+			&lt;b&gt;These choosers are for included for testing purposes&lt;/b&gt;
+			&lt;br&gt;
+			&lt;br&gt;
+			Please see the &lt;a href=&quot;http://www.ssec.wisc.edu/mcidas/forums&quot;&gt;McIDAS-V Forums&lt;/a&gt; for more information			
+		" />
+	</panel>
+
+	<panel title="Imagery - Suomi NPP" category="Under Development" layout="border"
+        tabtooltip="For accessing Suomi NPP data">
+		<chooser id="chooser.npp" title="Suomi NPP" menutitle="Suomi NPP data"
+            showinmenu="true" helppath="idv.data.choosers.suominppchooser"
+            showpolling="false" filepattern=".*" selectdatasourceid="true"
+            datasourceid="SuomiNPP" class="edu.wisc.ssec.mcidasv.chooser.SuomiNPPChooser" />
+	</panel>
+
+    <panel title="Imagery - Satellite Orbit Track" category="Under Development" layout="border"
+        tabtooltip="Satellite orbit tracks from TLE data">
+        <chooser id="chooser.tle" title="Satellite Orbit Track" menutitle="Satellite Orbit Track"
+            showinmenu="true" helppath="idv.data.choosers.tlechooser"
+            showpolling="false" filepattern=".*" selectdatasourceid="true"
+            datasourceid="TLE" class="edu.wisc.ssec.mcidasv.chooser.PolarOrbitTrackChooser" />
+    </panel>
+
+    <panel title="Imagery - Compatibility Testing" category="Under Development" layout="border" tabtooltip="Please do not use this just yet.">
+        <chooser id="chooser.image"
+                 title="Image Chooser Compatibility Testing"
+                 menutitle="Compatibility Testing"
+                 helppath="idv.data.choosers.imagechooser"
+                 showdetails="true"
+                 includeNavComp="true"
+                 class="edu.wisc.ssec.mcidasv.chooser.adde.ImageChooser" />
+    </panel>
+
+	<panel title="Imagery - Jon Testing" category="Under Development" layout="border" tabtooltip="Please do not use this just yet.">
+	<chooser id="chooser.jon"
+			 title="Jon Testing"
+			 menutitle="Compatibility Testing"
+			 helppath="idv.data.choosers.imagechooser"
+			 showdetails="true"
+			 includeNavComp="true"
+			 class="ucar.unidata.idv.chooser.adde.AddeImageChooser" />
+	</panel>
+
+	<!--                       -->
+	<!--     STYLES            -->
+	<!--                       -->
+	
+	<styles>
+		<!-- Define the style for the labels   -->
+		<style class="toplabel" fontsize="16" fontface="Times New Roman"
+			place="Center" />
+	</styles>
+
+	<!--                       -->
+	<!--     PROPERTIES        -->
+	<!--                       -->
+	
+	<properties>
+		<!--
+			The IdvChooserManager looks for the following 2 properties to get the
+			xmlui strings for wrapping all of the top level chooser components
+			Uncomment the following to use the treepanel
+		-->
+		<!--
+			<property name="idv.chooser.toptag.open" value="&lt;treepanel
+			icon=&quot;/auxdata/ui/icons/DataChooser16.gif&quot;&gt;"/> <property
+			name="idv.chooser.toptag.close" value="&lt;/treepanel&gt;"/>
+		-->
+	</properties>
+
+</choosers>

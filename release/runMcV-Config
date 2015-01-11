@@ -1,0 +1,98 @@
+#!/bin/sh
+
+DOCUMENT_DIRECTORY=${HOME}
+if [ `uname -s` = "Darwin" ]; then
+  DOCUMENT_DIRECTORY=${HOME}/Documents
+fi
+
+MCV_USERPATH="${DOCUMENT_DIRECTORY}/McIDAS-V"
+MCV_PARAMS="$@"
+
+# Check for -userpath parameter
+while [ "$1" != "" ]; do
+  if [ "$1" = "-userpath" ]; then
+    MCV_USERPATH="$2"
+    shift
+    shift
+  else
+    shift
+  fi
+done
+
+# Check for old style default userpath
+if [ -d "${HOME}/.mcidasv" ]; then
+  if [ ! -d "${MCV_USERPATH}" ]; then
+    echo "Moving files to new user path: ${MCV_USERPATH}..."
+    mv "${HOME}/.mcidasv" "${MCV_USERPATH}"
+  fi
+fi
+
+# Change to the directory that the script resides in before executing
+HAVEWHICH=`which which >/dev/null 2>&1`
+if [ $? -eq 0 ]; then
+  scriptname=`which "$0" 2>/dev/null`
+else
+  scriptname="$0"
+fi
+if [ -z "${scriptname}" ]; then
+  scriptname="$0"
+fi
+dirname=`dirname "$scriptname"`
+cd "$dirname"
+
+# Create MCV_USERPATH directory if it doesn't already exist
+if [ ! -d "${MCV_USERPATH}" ]; then
+  mkdir -p "${MCV_USERPATH}"
+fi
+
+# Copy prefs to MCV_USERPATH directory if it doesn't already exist
+if [ ! -f "${MCV_USERPATH}/runMcV.prefs" ]; then
+  cp runMcV.prefs "${MCV_USERPATH}/runMcV.prefs"
+fi
+
+JAVA_FLAGS=
+
+# Point at McV's bundled JRE on OS X. 
+if [ `uname -s` = "Darwin" ]; then
+  JAVA_HOME="$PWD/.install4j/jre.bundle/Contents/Home/jre"
+fi
+
+# Look for java
+JAVA_BIN="java"
+if [ -f "./jre/bin/java" ]; then
+  JAVA_HOME="$PWD/jre"
+fi
+
+if [ -n "${JAVA_HOME}" ]; then
+  JAVA_BIN="${JAVA_HOME}/bin/java"
+else
+  # try to infer JAVA_HOME...
+  JAVA_PATH=$(which java)
+  JAVA_HOME=$(readlink -f ${JAVA_PATH} | sed "s:/bin/java::")
+fi
+
+# Get the amount of system memory
+echo "Reading system configuration..."
+SYS_MEM=`${JAVA_BIN} -Dmcv.userpath=\"${MCV_USERPATH}\" -cp mcidasv.jar edu.wisc.ssec.mcidasv.util.GetMem 2>/dev/null`
+
+################################################################################
+# OS specific settings
+
+# Mac OS X settings
+if [ `uname -s` = "Darwin" ]; then
+  # Set the menu bar name
+  JAVA_FLAGS="${JAVA_FLAGS} -Xdock:name=McIDAS-V -Xdock:icon=mcidasv.icns"
+fi
+# Done with Mac OS X settings
+
+# Done with OS specific settings
+################################################################################
+
+MCV_CLASSPATH=".:./mcv_userguide.jar:./mcidasv.jar"
+
+# McV supplies all of its dependencies; there's no need for the JRE to look elsewhere.
+MCV_EXTDIR="-Djava.ext.dirs=\"${JAVA_HOME}/lib/ext\""
+MCV_LIBPATH="-Djava.library.path=\"${JAVA_HOME}/lib/ext\""
+
+# Run it
+${JAVA_BIN} ${JAVA_FLAGS} ${MCV_EXTDIR} ${MCV_LIBPATH} -Dmcv.userpath=\"${MCV_USERPATH}\" -classpath "${MCV_CLASSPATH}" -da edu.wisc.ssec.mcidasv.startupmanager.StartupManager -Didv.sysmem=${SYS_MEM} -userpath "${MCV_USERPATH}" $*
